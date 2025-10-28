@@ -1,0 +1,212 @@
+﻿@using System.Text.Json
+@model M_UserLogin.Models.AnalyticsViewModel
+
+@{
+    ViewData["Title"] = "User Insights";
+    var roleJson = ViewBag.RoleDistributionJson ?? "{}";
+    var domainJson = ViewBag.EmailDomainJson ?? "{}";
+}
+
+<style>
+    body {
+        background: linear-gradient(135deg, #000000, #2b2b2b);
+        font-family: 'Segoe UI', sans-serif;
+    }
+
+    .analytics-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        min-height: 90vh;
+        padding: 40px 0;
+    }
+
+    .analytics-card {
+        width: 90%;
+        max-width: 1100px;
+        background: #111;
+        color: #fff;
+        border-radius: 20px;
+        padding: 30px;
+        box-shadow: 0 8px 30px rgba(0,0,0,0.6);
+        border: 1px solid #ffc10733;
+    }
+
+    h2 {
+        color: #ffc107;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    .stats-row {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 25px;
+        margin-bottom: 35px;
+    }
+
+    .stat-box {
+        background: rgba(255,255,255,0.05);
+        border-radius: 12px;
+        padding: 20px;
+        text-align: center;
+        width: 45%;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+    }
+
+    .stat-value {
+        font-size: 2rem;
+        font-weight: bold;
+        color: #ffc107;
+    }
+
+    .chart-section {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        gap: 20px;
+    }
+
+    .chart-card {
+        flex: 1 1 45%;
+        background: rgba(255,255,255,0.05);
+        border-radius: 12px;
+        padding: 20px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+    }
+
+    table {
+        width: 100%;
+        color: #fff;
+        margin-top: 20px;
+        border-collapse: collapse;
+    }
+
+    th, td {
+        padding: 8px 12px;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    th {
+        color: #ffc107;
+    }
+
+    .footer-note {
+        text-align: center;
+        color: #888;
+        margin-top: 30px;
+        font-size: 0.9rem;
+    }
+
+    #userSearch {
+        width: 100%;
+        padding: 8px 12px;
+        margin-bottom: 10px;
+        border-radius: 8px;
+        border: 1px solid #ffc10733;
+        background: rgba(255,255,255,0.05);
+        color: #fff;
+    }
+</style>
+
+<div class="analytics-wrapper">
+    <div class="analytics-card">
+        <h2>📊 User Insights Dashboard</h2>
+        <p class="text-center text-muted">Quick overview of registered users and role distribution.</p>
+
+        <div class="stats-row">
+            <div class="stat-box">
+                <div class="stat-value">@Model.TotalUsers</div>
+                <div>Total Registered Users</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-value">@Model.AdminCount</div>
+                <div>Admins</div>
+            </div>
+        </div>
+
+        <div class="chart-section">
+            <div class="chart-card">
+                <h5>Role Distribution</h5>
+                <canvas id="rolePieChart"></canvas>
+            </div>
+
+            <div class="chart-card">
+                <h5>Top Email Domains</h5>
+                <canvas id="domainBarChart"></canvas>
+            </div>
+        </div>
+
+        <div class="chart-card" style="margin-top: 30px;">
+            <h5>User List (Sample)</h5>
+            <input type="text" id="userSearch" placeholder="Search users..." />
+            <table id="userTable">
+                <thead>
+                    <tr><th>Full Name</th><th>Email</th><th>User ID</th></tr>
+                </thead>
+                <tbody>
+                    @foreach (var u in Model.UsersList)
+                    {
+                        <tr>
+                            <td>@u.FullName</td>
+                            <td>@u.Email</td>
+                            <td>@u.Id</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+
+        <div class="footer-note">© 2025 - M_UserLogin | Data Insights Dashboard</div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    const roleData = JSON.parse('@Html.Raw(roleJson)');
+    const domainData = JSON.parse('@Html.Raw(domainJson)');
+
+    // Pie chart (roles)
+    const ctxRole = document.getElementById('rolePieChart').getContext('2d');
+    new Chart(ctxRole, {
+        type: 'pie',
+        data: {
+            labels: Object.keys(roleData),
+            datasets: [{
+                data: Object.values(roleData),
+                backgroundColor: ['#ffc107','#ffca2c','#ffdb70','#ffe999','#fff4c2']
+            }]
+        },
+        options: { plugins: { legend: { labels: { color: 'white' } } } }
+    });
+
+    // Bar chart (email domains)
+    const ctxDomain = document.getElementById('domainBarChart').getContext('2d');
+    new Chart(ctxDomain, {
+        type: 'bar',
+        data: {
+            labels: Object.keys(domainData),
+            datasets: [{
+                label: 'Users',
+                data: Object.values(domainData),
+                backgroundColor: '#ffc107'
+            }]
+        },
+        options: {
+            plugins: { legend: { display: false } },
+            scales: {
+                x: { ticks: { color: 'white' } },
+                y: { ticks: { color: 'white' }, beginAtZero: true }
+            }
+        }
+    });
+
+    // Search functionality for User List
+    const searchInput = document.getElementById('userSearch');
+    searchInput.addEventListener('keyup', function() {
+        const filter = this.value.toLowerCase();
+        document.querySelectorAll('#userTable tbody tr').forEach(row => {
+            row.style.display = row.innerText.toLowerCase().includes(filter) ? '' : 'none';
+        });
+    });
+</script>

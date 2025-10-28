@@ -1,0 +1,106 @@
+﻿@{
+    ViewData["Title"] = "Welcome";
+    Layout = "~/Views/Shared/_AccountLayout.cshtml";
+}
+
+<div class="welcome-box text-center">
+    <h1 class="title">🚀 Welcome to <span class="highlight">M_UserLogin</span></h1>
+    <p class="subtitle">Secure • Smart • Simplified Authentication System</p>
+
+    <div class="feature-list">
+        <p>🔐 Secure login & registration using ASP.NET Identity + JWT</p>
+        <p>👥 Role-based access: Admin & User panels</p>
+        <p>⚙️ Admin can manage users, roles & permissions</p>
+        <p>🧾 Secret code validation for password recovery</p>
+    </div>
+
+    <div class="buttons mt-3">
+        <a asp-controller="Account" asp-action="Login" class="btn btn-warning fw-bold px-4 py-2 me-2">🔑 Login</a>
+        <a asp-controller="Account" asp-action="Register" class="btn btn-outline-light fw-bold px-4 py-2">🧾 Register</a>
+    </div>
+
+    <p class="footer mt-4 mb-0">
+        © 2025 <span class="highlight">M_UserLogin</span> — Powered by ASP.NET Core MVC + JWT
+    </p>
+</div>
+
+<style>
+    body {
+        background: radial-gradient(circle at top left, #141414, #0f0f0f 70%);
+        color: #eaeaea;
+        font-family: 'Segoe UI', sans-serif;
+        height: 100vh;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .welcome-box {
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 18px;
+        box-shadow: 0 0 25px rgba(0, 0, 0, 0.6);
+        width: 600px;
+        padding: 40px 50px;
+    }
+
+    .title {
+        color: #fff;
+        font-size: 1.9rem;
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+
+    .highlight {
+        color: #ffc107;
+    }
+
+    .subtitle {
+        color: #aaa;
+        font-size: 1rem;
+        margin-bottom: 25px;
+    }
+
+    .feature-list {
+        text-align: left;
+        margin: 0 auto;
+        max-width: 90%;
+        line-height: 1.6;
+        color: #d1d5db;
+        font-size: 0.95rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        padding: 15px 0;
+    }
+
+    .btn-warning {
+        background-color: #ffc107;
+        color: #000;
+        border: none;
+        transition: 0.3s;
+    }
+
+    .btn-warning:hover {
+        background-color: #ffca2c;
+        transform: translateY(-2px);
+    }
+
+    .btn-outline-light {
+        color: #f8f9fa;
+        border: 1px solid #f8f9fa;
+        transition: 0.3s;
+    }
+
+    .btn-outline-light:hover {
+        background-color: #f8f9fa;
+        color: #0f0f0f;
+        transform: translateY(-2px);
+    }
+
+    .footer {
+        color: #999;
+        font-size: 0.85rem;
+        margin-top: 30px;
+    }
+</style>

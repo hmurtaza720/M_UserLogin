@@ -1,0 +1,120 @@
+﻿@model M_UserLogin.Models.Users
+@using Microsoft.AspNetCore.Identity
+@inject UserManager<M_UserLogin.Models.Users> UserManager
+
+@{
+    ViewData["Title"] = "Dashboard";
+
+    var isAdmin = User.IsInRole("Admin");
+    var userName = Model?.FullName ?? "User";
+    var userEmail = Model?.Email ?? "N/A";
+}
+
+<style>
+    body {
+        background: linear-gradient(135deg, #1e1e2f, #252540, #12121c);
+        color: #f0f0f0;
+        font-family: 'Segoe UI', sans-serif;
+        min-height: 100vh;
+    }
+
+    .dashboard-container {
+        max-width: 1100px;
+        margin: 50px auto;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 16px;
+        padding: 30px;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+    }
+
+    h2 {
+        text-align: center;
+        color: #fff;
+        font-weight: 600;
+    }
+
+    .card {
+        background: rgba(255, 255, 255, 0.1);
+        border: none;
+        color: #fff;
+        transition: 0.3s;
+    }
+
+    .card:hover {
+        transform: translateY(-5px);
+        background: rgba(255, 255, 255, 0.15);
+    }
+
+    .card h5 {
+        color: #ffc107;
+    }
+
+    .btn-outline-light {
+        border-color: #ffc107;
+        color: #ffc107;
+    }
+
+    .btn-outline-light:hover {
+        background: #ffc107;
+        color: #000;
+    }
+</style>
+
+<div class="dashboard-container">
+    <h2 class="mb-4">👋 Welcome, @(isAdmin ? "Admin " + userName + " 👑" : userName)</h2>
+    <p class="text-center text-muted">Here’s your personalized dashboard</p>
+
+    <div class="row mt-4 g-4 text-center">
+
+        <!-- 👤 Profile -->
+        <div class="col-md-4">
+            <div class="card h-100 p-3">
+                <h5>👤 Profile</h5>
+                <p class="small">@userEmail</p>
+                <a asp-controller="Home" asp-action="Privacy" class="btn btn-outline-light btn-sm">View Profile</a>
+            </div>
+        </div>
+
+        <!-- 🔐 Change Password -->
+        <div class="col-md-4">
+            <div class="card h-100 p-3">
+                <h5>🔐 Change Password</h5>
+                <p class="small">Keep your account secure</p>
+                <a asp-controller="Account" asp-action="ChangePassword" class="btn btn-outline-light btn-sm">Change</a>
+            </div>
+        </div>
+
+        <!-- 🧾 Register (Visible only for Admins) -->
+        @if (isAdmin)
+        {
+            <div class="col-md-4">
+                <div class="card h-100 p-3">
+                    <h5>🧾 Register User</h5>
+                    <p class="small">Add new user accounts</p>
+                    <a asp-controller="Account" asp-action="Register" class="btn btn-outline-light btn-sm">Register</a>
+                </div>
+            </div>
+        }
+
+        <!-- ⚙️ Dashboard Settings (Admin only) -->
+        @if (isAdmin)
+        {
+            <div class="col-md-4">
+                <div class="card h-100 p-3">
+                    <h5>⚙️ Dashboard Settings</h5>
+                    <p class="small">Manage roles & users</p>
+                    <a asp-controller="Admin" asp-action="Index" class="btn btn-outline-light btn-sm">Admin Panel</a>
+                </div>
+            </div>
+        }
+
+        <!-- 🚪 Logout -->
+        <div class="col-md-4">
+            <div class="card h-100 p-3">
+                <h5>🚪 Logout</h5>
+                <p class="small">Exit your session safely</p>
+                <a asp-controller="Account" asp-action="Logout" class="btn btn-outline-light btn-sm">Logout</a>
+            </div>
+        </div>
+    </div>
+</div>
