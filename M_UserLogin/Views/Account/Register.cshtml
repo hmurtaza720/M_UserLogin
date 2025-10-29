@@ -1,117 +1,46 @@
-﻿@using M_UserLogin.ViewModels
-@model RegisterViewModel
-
+﻿@model M_UserLogin.ViewModels.RegisterViewModel
 @{
     ViewData["Title"] = "Register";
     Layout = "~/Views/Shared/_AccountLayout.cshtml";
 }
 
-<style>
-    body {
-        background: linear-gradient(135deg, #1e1e2f, #252540, #12121c);
-        color: #f0f0f0;
-        font-family: 'Segoe UI', sans-serif;
-        min-height: 100vh;
-    }
+<h2 class="mb-4 text-center">🧾 Register</h2>
+<form asp-action="Register" method="post">
+    <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
 
-    .account-box {
-        max-width: 450px;
-        margin: 60px auto;
-        background: rgba(255, 255, 255, 0.05);
-        border-radius: 16px;
-        padding: 30px;
-        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
-        animation: fadeInUp 0.8s ease;
-    }
+    <div class="mb-3">
+        <label asp-for="Name" class="form-label">Full Name</label>
+        <input asp-for="Name" class="form-control" placeholder="Enter your full name" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
 
-    h2 {
-        color: #ffc107;
-        font-weight: 600;
-    }
+    <div class="mb-3">
+        <label asp-for="Email" class="form-label">Email</label>
+        <input asp-for="Email" class="form-control" placeholder="Enter your email" />
+        <span asp-validation-for="Email" class="text-danger"></span>
+    </div>
 
-    label {
-        color: #ddd;
-        font-weight: 500;
-    }
+    <div class="mb-3">
+        <label asp-for="Password" class="form-label">Password</label>
+        <input asp-for="Password" class="form-control" placeholder="Create a password" />
+        <span asp-validation-for="Password" class="text-danger"></span>
+    </div>
 
-    .form-control {
-        background: rgba(255, 255, 255, 0.1);
-        border: 1px solid #444;
-        color: #fff;
-    }
+    <div class="mb-3">
+        <label asp-for="ConfirmPassword" class="form-label">Confirm Password</label>
+        <input asp-for="ConfirmPassword" class="form-control" placeholder="Re-enter your password" />
+        <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+    </div>
 
-    .form-control:focus {
-        border-color: #ffc107;
-        box-shadow: 0 0 8px #ffc107;
-    }
+    <div class="mb-3">
+        <label asp-for="SecretCode" class="form-label">Secret Code (for recovery)</label>
+        <input asp-for="SecretCode" class="form-control" placeholder="Enter a secret code" />
+        <span asp-validation-for="SecretCode" class="text-danger"></span>
+    </div>
 
-    .btn-primary {
-        background: #ffc107;
-        border: none;
-        color: #000;
-        font-weight: 600;
-        transition: 0.3s;
-    }
+    <button type="submit" class="btn btn-primary w-100 py-2">Register</button>
 
-    .btn-primary:hover {
-        background: #ffda47;
-        transform: translateY(-2px);
-    }
-
-    a.text-link {
-        color: #ffc107;
-        text-decoration: none;
-    }
-
-    a.text-link:hover {
-        text-decoration: underline;
-    }
-
-    keyframes fadeInUp {
-        from { opacity: 0; transform: translateY(20px); }
-        to { opacity: 1; transform: translateY(0); }
-    }
-</style>
-
-<div class="account-box text-center">
-    <h2 class="mb-4">🧾 Register</h2>
-    <form asp-action="Register" method="post">
-        <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
-
-        <div class="mb-3 text-start">
-            <label asp-for="Name" class="form-label">Full Name</label>
-            <input asp-for="Name" class="form-control" placeholder="Enter your full name" />
-            <span asp-validation-for="Name" class="text-danger"></span>
-        </div>
-
-        <div class="mb-3 text-start">
-            <label asp-for="Email" class="form-label">Email</label>
-            <input asp-for="Email" class="form-control" placeholder="Enter your email" />
-            <span asp-validation-for="Email" class="text-danger"></span>
-        </div>
-
-        <div class="mb-3 text-start">
-            <label asp-for="Password" class="form-label">Password</label>
-            <input asp-for="Password" class="form-control" placeholder="Create a password" />
-            <span asp-validation-for="Password" class="text-danger"></span>
-        </div>
-
-        <div class="mb-3 text-start">
-            <label asp-for="ConfirmPassword" class="form-label">Confirm Password</label>
-            <input asp-for="ConfirmPassword" class="form-control" placeholder="Re-enter your password" />
-            <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
-        </div>
-
-        <div class="mb-3 text-start">
-            <label asp-for="SecretCode" class="form-label">Secret Code (for password recovery)</label>
-            <input asp-for="SecretCode" class="form-control" placeholder="Enter a secret code (e.g. 1234 or a keyword)" />
-            <span asp-validation-for="SecretCode" class="text-danger"></span>
-        </div>
-
-        <button type="submit" class="btn btn-primary w-100 py-2">Register</button>
-
-        <p class="mt-3 small">
-            Already have an account? <a asp-action="Login" class="text-link">Login</a>
-        </p>
-    </form>
-</div>
+    <p class="mt-3 small text-center">
+        Already have an account? <a asp-action="Login" class="text-link">Login</a>
+    </p>
+</form>

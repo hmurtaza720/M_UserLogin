@@ -3,81 +3,81 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewBag.Title - M_UserLogin</title>
+    <title>@ViewBag.Title - EMS</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <style>
         body {
-            font-family: 'Poppins', sans-serif;
-            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-            background-size: 400% 400%;
-            animation: bgMove 18s ease infinite;
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #1e1e2f, #252540, #12121c);
+            color: #f0f0f0;
             min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            color: #e8f1f8;
         }
 
-        keyframes bgMove {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-
-        .account-container {
+        .account-box {
+            max-width: 450px;
             width: 100%;
-            max-width: 400px;
-            background: rgba(255, 255, 255, 0.1);
-            padding: 40px 30px;
+            margin: 60px auto;
+            background: rgba(255, 255, 255, 0.05);
             border-radius: 16px;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
-            backdrop-filter: blur(10px);
+            padding: 30px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+            animation: fadeInUp 0.8s ease;
         }
 
-        .account-box h2 {
-            color: #00d4ff;
+        h2 {
+            color: #ffc107;
             font-weight: 600;
         }
 
+        label {
+            color: #ddd;
+            font-weight: 500;
+        }
+
         input.form-control {
-            background: rgba(255, 255, 255, 0.15);
-            border: none;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid #444;
             color: #fff;
         }
 
         input.form-control:focus {
-            background: rgba(255, 255, 255, 0.25);
-            color: #fff;
-            box-shadow: 0 0 0 0.2rem rgba(0, 212, 255, 0.3);
-        }
-
-        .btn {
-            border-radius: 25px;
-            font-weight: 500;
+            border-color: #ffc107;
+            box-shadow: 0 0 8px #ffc107;
         }
 
         .btn-primary {
-            background: #00d4ff;
+            background: #ffc107;
             border: none;
             color: #000;
+            font-weight: 600;
+            transition: 0.3s;
         }
 
         .btn-primary:hover {
-            background: #00a3cc;
+            background: #ffda47;
+            transform: translateY(-2px);
         }
 
-        .text-link {
-            color: #00d4ff;
+        a.text-link {
+            color: #ffc107;
             text-decoration: none;
         }
 
-        .text-link:hover {
+        a.text-link:hover {
             text-decoration: underline;
+        }
+
+        keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
     </style>
 </head>
 <body>
-    <div class="account-container">
+    <div class="account-box">
         @RenderBody()
     </div>
 

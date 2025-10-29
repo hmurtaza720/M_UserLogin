@@ -4,11 +4,7 @@
 
 @{
     ViewData["Title"] = "Welcome";
-    Layout = "~/Views/Shared/_AccountLayout.cshtml";
-
-    var isAdmin = User.IsInRole("Admin");
-    var userName = Model?.FullName ?? "User";
-    var userEmail = Model?.Email ?? "N/A";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <style>
@@ -20,39 +16,39 @@
     }
 
     .welcome-container {
-        max-width: 1100px;
-        margin: 50px auto;
-        background: rgba(255, 255, 255, 0.05);
-        border-radius: 16px;
-        padding: 30px;
-        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+        max-width: 100%;
+        padding: 30px 50px;
     }
 
     h2 {
-        text-align: center;
         color: #fff;
         font-weight: 600;
         margin-bottom: 5px;
+        text-align: center;
     }
 
     .text-muted {
-        color: #d1d1d1 !important;
-        text-align: center;
+        color: #d1d1d1;
         margin-bottom: 30px;
+        text-align: center;
     }
 
-    .row {
-        margin-top: 20px;
+    .dashboard-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
     }
 
     .card {
-        background: rgba(255, 255, 255, 0.1);
+        background: rgba(255, 255, 255, 0.05);
         border: none;
         color: #fff;
-        transition: 0.3s;
         border-radius: 12px;
-        padding: 25px;
-        height: 100%;
+        padding: 20px;
+        flex: 1 1 calc(33.333% - 20px);
+        min-width: 250px;
+        transition: 0.3s;
     }
 
     .card:hover {
@@ -66,15 +62,17 @@
         margin-bottom: 10px;
     }
 
-    .btn-outline-light {
-        border-color: #ffc107;
-        color: #ffc107;
-        font-weight: 500;
+    .card p {
+        font-size: 0.85rem;
+        line-height: 1.4;
     }
 
-    .btn-outline-light:hover {
-        background: #ffc107;
-        color: #000;
+    .btn-group {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        margin-top: 30px;
+        flex-wrap: wrap;
     }
 
     .btn-warning {
@@ -82,6 +80,8 @@
         color: #000;
         font-weight: 600;
         border: none;
+        padding: 10px 25px;
+        border-radius: 25px;
         transition: 0.3s;
     }
 
@@ -90,77 +90,78 @@
         transform: translateY(-2px);
     }
 
+    .btn-outline-light {
+        border-color: #ffc107;
+        color: #ffc107;
+        font-weight: 500;
+        padding: 10px 25px;
+        border-radius: 25px;
+    }
+
+    .btn-outline-light:hover {
+        background: #ffc107;
+        color: #000;
+    }
+
     footer {
         text-align: center;
         color: #999;
         margin-top: 40px;
         font-size: 0.9rem;
     }
+
+    media (max-width: 992px) {
+        .card {
+            flex: 1 1 calc(50% - 20px);
+        }
+    }
+
+    media (max-width: 600px) {
+        .card {
+            flex: 1 1 100%;
+        }
+    }
 </style>
 
 <div class="welcome-container">
-    <h2>👋 Welcome, @(isAdmin ? "Admin " + userName + " 👑" : userName)</h2>
-    <p class="text-muted">Explore the features of your EMS Portal</p>
+    <h2>👋 Welcome to EMS</h2>
+    <p class="text-muted">Explore the main features of your EMS Portal</p>
 
-    <div class="row mt-4 g-4 text-center">
-        <!-- 👤 Profile -->
-        <div class="col-md-4">
-            <div class="card h-100 p-3">
-                <h5>👤 Profile</h5>
-                <p class="small">@userEmail</p>
-                <a asp-controller="Account" asp-action="Login" class="btn btn-outline-light btn-sm">Login</a>
-            </div>
+    <div class="dashboard-grid">
+        <div class="card">
+            <h5>🕒 Attendance Management</h5>
+            <p>Employees can mark attendance. Admins can view all employee records and statuses. Users can see their daily attendance history.</p>
         </div>
 
-        <!-- 🕒 Attendance & Leave -->
-        <div class="col-md-4">
-            <div class="card h-100 p-3">
-                <h5>🕒 Attendance & Leave</h5>
-                <p class="small">Mark attendance, apply for leave, and track records.</p>
-                <a asp-controller="Account" asp-action="Login" class="btn btn-outline-light btn-sm">Access</a>
-            </div>
+        <div class="card">
+            <h5>📅 Leave Management</h5>
+            <p>Employees can apply for leave and check status. Admins can approve/reject requests through the dashboard.</p>
         </div>
 
-        <!-- 📊 Admin / Insights -->
-        <div class="col-md-4">
-            <div class="card h-100 p-3">
-                <h5>📊 Admin Dashboard</h5>
-                <p class="small">Admins can manage users, attendance, and analytics.</p>
-                <a asp-controller="Account" asp-action="Login" class="btn btn-outline-light btn-sm">Access</a>
-            </div>
+        <div class="card">
+            <h5>⚙️ User & Role Management</h5>
+            <p>Admins can register users, assign roles, manage permissions, and delete accounts.</p>
         </div>
 
-        <!-- ⚙️ Role Management -->
-        <div class="col-md-4">
-            <div class="card h-100 p-3">
-                <h5>⚙️ Role Management</h5>
-                <p class="small">Assign roles, update permissions, and maintain secure access.</p>
-                <a asp-controller="Account" asp-action="Login" class="btn btn-outline-light btn-sm">Access</a>
-            </div>
+        <div class="card">
+            <h5>📊 Data Insights & Analytics</h5>
+            <p>Admins get dashboards with metrics like total users, role distribution, user growth over time, and daily check-ins.</p>
         </div>
 
-        <!-- 💡 Responsive Design -->
-        <div class="col-md-4">
-            <div class="card h-100 p-3">
-                <h5>💡 Responsive Design</h5>
-                <p class="small">Clean, modern, and mobile-friendly UI.</p>
-                <a asp-controller="Account" asp-action="Login" class="btn btn-outline-light btn-sm">Explore</a>
-            </div>
+        <div class="card">
+            <h5>🧑 Personalized Dashboards</h5>
+            <p>Admins see controls for managing attendance, leave requests, and dashboard settings. Regular users have options for attendance and leave tracking.</p>
         </div>
 
-        <!-- 🧾 Data Insights -->
-        <div class="col-md-4">
-            <div class="card h-100 p-3">
-                <h5>🧾 Data Insights</h5>
-                <p class="small">Track attendance, leaves, and growth trends via analytics.</p>
-                <a asp-controller="Account" asp-action="Login" class="btn btn-outline-light btn-sm">View</a>
-            </div>
+        <div class="card">
+            <h5>🔒 Secure Authentication</h5>
+            <p>Secure login and registration, password recovery via secret code, and email verification for account security.</p>
         </div>
     </div>
 
-    <div class="text-center mt-5">
-        <a asp-controller="Account" asp-action="Login" class="btn btn-warning px-4 py-2 me-2">🔑 Login</a>
-        <a asp-controller="Account" asp-action="Register" class="btn btn-outline-light px-4 py-2">🧾 Register</a>
+    <div class="btn-group">
+        <a asp-controller="Account" asp-action="Login" class="btn btn-warning">🔑 Login</a>
+        <a asp-controller="Account" asp-action="Register" class="btn btn-outline-light">🧾 Register</a>
     </div>
 
     <footer>© 2025 <span class="text-warning">EMS</span> — Powered by ASP.NET Core MVC</footer>
