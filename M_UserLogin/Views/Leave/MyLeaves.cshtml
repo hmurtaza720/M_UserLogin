@@ -1,0 +1,60 @@
+﻿@model IEnumerable<M_UserLogin.Models.LeaveRequest>
+@{
+    ViewData["Title"] = "My Leave Requests";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container mt-5">
+    <div class="card shadow-lg p-4" style="background-color:#111; color:white; border:1px solid #ffc107;">
+        <h3 class="text-warning text-center mb-4">📅 My Leave Requests</h3>
+
+        @if (TempData["Message"] != null)
+        {
+            <div class="alert alert-success text-center">@TempData["Message"]</div>
+        }
+
+        @if (!Model.Any())
+        {
+            <p class="text-center text-muted">You have not applied for any leave yet.</p>
+        }
+        else
+        {
+            <table class="table table-dark table-striped text-center align-middle">
+                <thead>
+                    <tr>
+                        <th>Type</th>
+                        <th>Start</th>
+                        <th>End</th>
+                        <th>Reason</th>
+                        <th>Status</th>
+                        <th>Requested On</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.LeaveType</td>
+                            <td>@item.StartDate.ToShortDateString()</td>
+                            <td>@item.EndDate.ToShortDateString()</td>
+                            <td>@item.Reason</td>
+                            <td>
+                                @if (item.Status == "Approved")
+                                { <span class="badge bg-success">Approved</span> }
+                                else if (item.Status == "Rejected")
+                                { <span class="badge bg-danger">Rejected</span> }
+                                else
+                                { <span class="badge bg-warning text-dark">Pending</span> }
+                            </td>
+                            <td>@item.RequestDate.ToShortDateString()</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        }
+
+        <div class="text-center mt-4">
+            <a asp-action="Apply" class="btn btn-warning fw-bold">+ Apply New Leave</a>
+        </div>
+    </div>
+</div>

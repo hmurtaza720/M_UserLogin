@@ -1,0 +1,38 @@
+﻿@model M_UserLogin.Models.AttendanceRecord
+@{
+    ViewData["Title"] = "Mark Attendance";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container mt-5 text-center" style="color:white;">
+    <div class="card shadow-lg p-4" style="background:#111; border:1px solid #ffc107;">
+        <h3 class="text-warning mb-3">🕒 Mark Attendance</h3>
+
+        @if (TempData["Message"] != null)
+        {
+            <div class="alert alert-info">@TempData["Message"]</div>
+        }
+
+        @if (Model == null)
+        {
+            <form asp-action="CheckIn" method="post">
+                <button type="submit" class="btn btn-warning btn-lg">Check In</button>
+            </form>
+        }
+        else if (Model.CheckOutTime == null)
+        {
+            <p class="mb-3">You checked in at: <b>@Model.CheckInTime?.ToShortTimeString()</b></p>
+            <form asp-action="CheckOut" method="post">
+                <button type="submit" class="btn btn-danger btn-lg">Check Out</button>
+            </form>
+        }
+        else
+        {
+            <p>✅ You have completed attendance for today.</p>
+            <p>Check-in: <b>@Model.CheckInTime?.ToShortTimeString()</b> | Check-out: <b>@Model.CheckOutTime?.ToShortTimeString()</b></p>
+        }
+
+        <a asp-action="MyAttendance" class="btn btn-secondary mt-4">📅 View My Attendance</a>
+        <a asp-controller="Home" asp-action="Index" class="btn btn-outline-warning mt-4 ms-2">⬅ Back to Dashboard</a>
+    </div>
+</div>

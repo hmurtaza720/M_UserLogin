@@ -38,6 +38,7 @@
         border: none;
         color: #fff;
         transition: 0.3s;
+        border-radius: 12px;
     }
 
     .card:hover {
@@ -47,16 +48,22 @@
 
     .card h5 {
         color: #ffc107;
+        font-weight: 600;
     }
 
     .btn-outline-light {
         border-color: #ffc107;
         color: #ffc107;
+        font-weight: 500;
     }
 
     .btn-outline-light:hover {
         background: #ffc107;
         color: #000;
+    }
+
+    .text-muted {
+        color: #d1d1d1 !important;
     }
 </style>
 
@@ -75,16 +82,67 @@
             </div>
         </div>
 
-        <!-- 🔐 Change Password -->
-        <div class="col-md-4">
-            <div class="card h-100 p-3">
-                <h5>🔐 Change Password</h5>
-                <p class="small">Keep your account secure</p>
-                <a asp-controller="Account" asp-action="ChangePassword" class="btn btn-outline-light btn-sm">Change</a>
+        <!-- 🕒 Attendance Section -->
+        @if (isAdmin)
+        {
+            <div class="col-md-4">
+                <div class="card h-100 p-3">
+                    <h5>🕒 Manage Attendance</h5>
+                    <p class="small">View and monitor employee attendance</p>
+                    <a asp-controller="Attendance" asp-action="Manage" class="btn btn-outline-light btn-sm">Open</a>
+                </div>
             </div>
-        </div>
+        }
+        else
+        {
+            <div class="col-md-4">
+                <div class="card h-100 p-3">
+                    <h5>🕒 Mark Attendance</h5>
+                    <p class="small">Check-in or check-out your attendance</p>
+                    <a asp-controller="Attendance" asp-action="Mark" class="btn btn-outline-light btn-sm">Open</a>
+                </div>
+            </div>
 
-        <!-- 🧾 Register (Visible only for Admins) -->
+            <div class="col-md-4">
+                <div class="card h-100 p-3">
+                    <h5>📅 My Attendance History</h5>
+                    <p class="small">View your daily attendance records</p>
+                    <a asp-controller="Attendance" asp-action="MyAttendance" class="btn btn-outline-light btn-sm">View</a>
+                </div>
+            </div>
+        }
+
+        <!-- 📅 Leave Management -->
+        @if (isAdmin)
+        {
+            <div class="col-md-4">
+                <div class="card h-100 p-3">
+                    <h5>📅 Manage Leave Requests</h5>
+                    <p class="small">Approve or reject user leave requests</p>
+                    <a asp-controller="Leave" asp-action="Manage" class="btn btn-outline-light btn-sm">Manage Leaves</a>
+                </div>
+            </div>
+        }
+        else
+        {
+            <div class="col-md-4">
+                <div class="card h-100 p-3">
+                    <h5>📝 Apply for Leave</h5>
+                    <p class="small">Request time off from work</p>
+                    <a asp-controller="Leave" asp-action="Apply" class="btn btn-outline-light btn-sm">Apply</a>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card h-100 p-3">
+                    <h5>📊 My Leave History</h5>
+                    <p class="small">Check your submitted leave requests</p>
+                    <a asp-controller="Leave" asp-action="MyLeaves" class="btn btn-outline-light btn-sm">View History</a>
+                </div>
+            </div>
+        }
+
+        <!-- 🧾 Register (Admin only) -->
         @if (isAdmin)
         {
             <div class="col-md-4">
@@ -104,6 +162,15 @@
                     <h5>⚙️ Dashboard Settings</h5>
                     <p class="small">Manage roles & users</p>
                     <a asp-controller="Admin" asp-action="Index" class="btn btn-outline-light btn-sm">Admin Panel</a>
+                </div>
+            </div>
+
+            <!-- 📈 Analytics (Admin only) -->
+            <div class="col-md-4">
+                <div class="card h-100 p-3">
+                    <h5>📈 User Insights</h5>
+                    <p class="small">Analyze user statistics</p>
+                    <a asp-controller="Analytics" asp-action="Dashboard" class="btn btn-outline-light btn-sm">View Insights</a>
                 </div>
             </div>
         }

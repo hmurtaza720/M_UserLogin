@@ -60,16 +60,6 @@
         background-color: #c82333;
     }
 
-    .btn-outline-warning {
-        color: #ffc107;
-        border-color: #ffc107;
-    }
-
-    .btn-outline-warning:hover {
-        background-color: #ffc107;
-        color: #000;
-    }
-
     .alert-success {
         background-color: #28a745;
         color: white;
@@ -77,38 +67,8 @@
         border-radius: 8px;
     }
 
-    .insight-card {
-        background: rgba(255, 255, 255, 0.08);
-        border-radius: 16px;
-        padding: 25px;
-        text-align: center;
-        margin-top: 25px;
-        transition: 0.3s;
-    }
-
-    .insight-card:hover {
-        background: rgba(255, 255, 255, 0.15);
-        transform: translateY(-5px);
-    }
-
-    .insight-card h5 {
-        color: #ffc107;
-        font-weight: 500;
-    }
-
-    .insight-card p {
-        font-size: 14px;
-        color: #bfbfbf;
-    }
-
-    .btn-outline-light {
-        border-color: #ffc107;
-        color: #ffc107;
-    }
-
-    .btn-outline-light:hover {
-        background: #ffc107;
-        color: #000;
+    .text-muted {
+        color: #ccc !important;
     }
 </style>
 
@@ -141,7 +101,6 @@
                     <td>@user.Email</td>
                     <td>
                         @{
-                            // Fix: Get roles for this user correctly
                             var rolesForUser = (ViewBag.UserRoles as List<(M_UserLogin.Models.Users User, IList<string> Roles)>)
                                                ?.FirstOrDefault(u => u.User.Id == user.Id)
                                                .Roles;
@@ -161,11 +120,6 @@
                             <input type="text" name="role" placeholder="Enter role..." class="form-control w-50 me-2" required />
                             <button type="submit" class="btn btn-sm btn-success">Assign</button>
                         </form>
-
-                        <form asp-action="PromoteToAdmin" method="post" class="text-center">
-                            <input type="hidden" name="userId" value="@user.Id" />
-                            <button type="submit" class="btn btn-sm btn-outline-warning">Promote to Admin</button>
-                        </form>
                     </td>
                     <td>
                         <form asp-action="DeleteUser" method="post">
@@ -177,14 +131,4 @@
             }
         </tbody>
     </table>
-
-    <!-- 📊 User Insights card remains unchanged -->
-    @if (User.IsInRole("Admin"))
-    {
-        <div class="insight-card">
-            <h5>📊 User Insights</h5>
-            <p>Analyze user statistics and data patterns</p>
-            <a asp-controller="Analytics" asp-action="Dashboard" class="btn btn-outline-light btn-sm">Open Insights Dashboard</a>
-        </div>
-    }
 </div>

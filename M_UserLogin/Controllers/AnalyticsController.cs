@@ -1,56 +1,58 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
+using M_UserLogin.Data;
 using M_UserLogin.Models;
 using System.Linq;
 using System.Text.Json;
 
 namespace M_UserLogin.Controllers
 {
-    [Authorize(Roles = "Admin")]  // 🧩 Only Admins can access this controller
+    [Authorize(Roles = "Admin")]
     public class AnalyticsController : Controller
     {
-        private readonly UserManager<Users> _userManager;
-        private readonly RoleManager<IdentityRole> _roleManager;
+        private readonly AppDbContext _context;
 
-        public AnalyticsController(UserManager<Users> userManager, RoleManager<IdentityRole> roleManager)
+        public AnalyticsController(AppDbContext context)
         {
-            _userManager = userManager;
-            _roleManager = roleManager;
+            _context = context;
         }
 
         public async Task<IActionResult> Dashboard()
         {
-            var users = _userManager.Users.ToList();
-            var totalUsers = users.Count;
-            var admins = new List<Users>();
+            var totalUsers = await _context.Users.CountAsync();
+            var admins = await _context.UserRoles.CountAsync();
 
-            foreach (var user in users)
-            {
-                if (await _userManager.IsInRoleAsync(user, "Admin"))
-                    admins.Add(user);
-            }
+            // ✅ Attendance analytics
+            var attendanceData = await _context.AttendanceRecords.ToListAsync();
 
-            var roleDistribution = new Dictionary<string, int>();
-            foreach (var role in _roleManager.Roles)
-            {
-                roleDistribution[role.Name] = users.Count(u => _userManager.IsInRoleAsync(u, role.Name).Result);
-            }
+            int totalRecords = attendanceData.Count;
+            int presentCount = attendanceData.Count(a => a.CheckOutTime != null);
+            int absentCount = totalUsers - (attendanceData.Select(a => a.UserId).Distinct().Count());
 
-            var emailDomains = users
-                .Select(u => u.Email.Split('@').Last())
-                .GroupBy(d => d)
-                .ToDictionary(g => g.Key, g => g.Count());
-
-            ViewBag.RoleDistributionJson = JsonSerializer.Serialize(roleDistribution);
-            ViewBag.EmailDomainJson = JsonSerializer.Serialize(emailDomains);
+            // ✅ Attendance trend (group by date)
+            var groupedData = attendanceData
+                .GroupBy(a => a.Date.Date)
+                .Select(g => new { Date = g.Key.ToShortDateString(), Count = g.Count() })
+                .OrderBy(g => g.Date)
+                .ToList();
 
             var model = new AnalyticsViewModel
             {
                 TotalUsers = totalUsers,
-                AdminCount = admins.Count,
-                UsersList = users
+                AdminCount = admins,
+                TotalAttendanceRecords = totalRecords,
+                TotalPresent = presentCount,
+                TotalAbsent = absentCount,
+                AttendanceDates = groupedData.Select(g => g.Date).ToList(),
+                CheckInCounts = groupedData.Select(g => g.Count).ToList(),
+                UsersList = await _context.Users.ToListAsync()
             };
+
+            // Role Distribution JSON for pie chart
+            var roles = await _context.UserRoles.ToListAsync();
+            var roleCounts = roles.GroupBy(r => r.RoleId).ToDictionary(g => g.Key.ToString(), g => g.Count());
+            ViewBag.RoleDistributionJson = JsonSerializer.Serialize(roleCounts);
 
             return View(model);
         }

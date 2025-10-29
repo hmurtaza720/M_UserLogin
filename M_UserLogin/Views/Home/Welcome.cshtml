@@ -1,82 +1,86 @@
-﻿@{
+﻿@model M_UserLogin.Models.Users
+@using Microsoft.AspNetCore.Identity
+@inject UserManager<M_UserLogin.Models.Users> UserManager
+
+@{
     ViewData["Title"] = "Welcome";
     Layout = "~/Views/Shared/_AccountLayout.cshtml";
+
+    var isAdmin = User.IsInRole("Admin");
+    var userName = Model?.FullName ?? "User";
+    var userEmail = Model?.Email ?? "N/A";
 }
-
-<div class="welcome-box text-center">
-    <h1 class="title">🚀 Welcome to <span class="highlight">M_UserLogin</span></h1>
-    <p class="subtitle">Secure • Smart • Simplified Authentication System</p>
-
-    <div class="feature-list">
-        <p>🔐 Secure login & registration using ASP.NET Identity + JWT</p>
-        <p>👥 Role-based access: Admin & User panels</p>
-        <p>⚙️ Admin can manage users, roles & permissions</p>
-        <p>🧾 Secret code validation for password recovery</p>
-    </div>
-
-    <div class="buttons mt-3">
-        <a asp-controller="Account" asp-action="Login" class="btn btn-warning fw-bold px-4 py-2 me-2">🔑 Login</a>
-        <a asp-controller="Account" asp-action="Register" class="btn btn-outline-light fw-bold px-4 py-2">🧾 Register</a>
-    </div>
-
-    <p class="footer mt-4 mb-0">
-        © 2025 <span class="highlight">M_UserLogin</span> — Powered by ASP.NET Core MVC + JWT
-    </p>
-</div>
 
 <style>
     body {
-        background: radial-gradient(circle at top left, #141414, #0f0f0f 70%);
-        color: #eaeaea;
+        background: linear-gradient(135deg, #1e1e2f, #252540, #12121c);
+        color: #f0f0f0;
         font-family: 'Segoe UI', sans-serif;
-        height: 100vh;
-        margin: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        min-height: 100vh;
     }
 
-    .welcome-box {
+    .welcome-container {
+        max-width: 1100px;
+        margin: 50px auto;
         background: rgba(255, 255, 255, 0.05);
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        border-radius: 18px;
-        box-shadow: 0 0 25px rgba(0, 0, 0, 0.6);
-        width: 600px;
-        padding: 40px 50px;
+        border-radius: 16px;
+        padding: 30px;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
     }
 
-    .title {
+    h2 {
+        text-align: center;
         color: #fff;
-        font-size: 1.9rem;
+        font-weight: 600;
+        margin-bottom: 5px;
+    }
+
+    .text-muted {
+        color: #d1d1d1 !important;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .row {
+        margin-top: 20px;
+    }
+
+    .card {
+        background: rgba(255, 255, 255, 0.1);
+        border: none;
+        color: #fff;
+        transition: 0.3s;
+        border-radius: 12px;
+        padding: 25px;
+        height: 100%;
+    }
+
+    .card:hover {
+        transform: translateY(-5px);
+        background: rgba(255, 255, 255, 0.15);
+    }
+
+    .card h5 {
+        color: #ffc107;
         font-weight: 600;
         margin-bottom: 10px;
     }
 
-    .highlight {
+    .btn-outline-light {
+        border-color: #ffc107;
         color: #ffc107;
+        font-weight: 500;
     }
 
-    .subtitle {
-        color: #aaa;
-        font-size: 1rem;
-        margin-bottom: 25px;
-    }
-
-    .feature-list {
-        text-align: left;
-        margin: 0 auto;
-        max-width: 90%;
-        line-height: 1.6;
-        color: #d1d5db;
-        font-size: 0.95rem;
-        border-top: 1px solid rgba(255, 255, 255, 0.1);
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        padding: 15px 0;
+    .btn-outline-light:hover {
+        background: #ffc107;
+        color: #000;
     }
 
     .btn-warning {
         background-color: #ffc107;
         color: #000;
+        font-weight: 600;
         border: none;
         transition: 0.3s;
     }
@@ -86,21 +90,78 @@
         transform: translateY(-2px);
     }
 
-    .btn-outline-light {
-        color: #f8f9fa;
-        border: 1px solid #f8f9fa;
-        transition: 0.3s;
-    }
-
-    .btn-outline-light:hover {
-        background-color: #f8f9fa;
-        color: #0f0f0f;
-        transform: translateY(-2px);
-    }
-
-    .footer {
+    footer {
+        text-align: center;
         color: #999;
-        font-size: 0.85rem;
-        margin-top: 30px;
+        margin-top: 40px;
+        font-size: 0.9rem;
     }
 </style>
+
+<div class="welcome-container">
+    <h2>👋 Welcome, @(isAdmin ? "Admin " + userName + " 👑" : userName)</h2>
+    <p class="text-muted">Explore the features of your EMS Portal</p>
+
+    <div class="row mt-4 g-4 text-center">
+        <!-- 👤 Profile -->
+        <div class="col-md-4">
+            <div class="card h-100 p-3">
+                <h5>👤 Profile</h5>
+                <p class="small">@userEmail</p>
+                <a asp-controller="Account" asp-action="Login" class="btn btn-outline-light btn-sm">Login</a>
+            </div>
+        </div>
+
+        <!-- 🕒 Attendance & Leave -->
+        <div class="col-md-4">
+            <div class="card h-100 p-3">
+                <h5>🕒 Attendance & Leave</h5>
+                <p class="small">Mark attendance, apply for leave, and track records.</p>
+                <a asp-controller="Account" asp-action="Login" class="btn btn-outline-light btn-sm">Access</a>
+            </div>
+        </div>
+
+        <!-- 📊 Admin / Insights -->
+        <div class="col-md-4">
+            <div class="card h-100 p-3">
+                <h5>📊 Admin Dashboard</h5>
+                <p class="small">Admins can manage users, attendance, and analytics.</p>
+                <a asp-controller="Account" asp-action="Login" class="btn btn-outline-light btn-sm">Access</a>
+            </div>
+        </div>
+
+        <!-- ⚙️ Role Management -->
+        <div class="col-md-4">
+            <div class="card h-100 p-3">
+                <h5>⚙️ Role Management</h5>
+                <p class="small">Assign roles, update permissions, and maintain secure access.</p>
+                <a asp-controller="Account" asp-action="Login" class="btn btn-outline-light btn-sm">Access</a>
+            </div>
+        </div>
+
+        <!-- 💡 Responsive Design -->
+        <div class="col-md-4">
+            <div class="card h-100 p-3">
+                <h5>💡 Responsive Design</h5>
+                <p class="small">Clean, modern, and mobile-friendly UI.</p>
+                <a asp-controller="Account" asp-action="Login" class="btn btn-outline-light btn-sm">Explore</a>
+            </div>
+        </div>
+
+        <!-- 🧾 Data Insights -->
+        <div class="col-md-4">
+            <div class="card h-100 p-3">
+                <h5>🧾 Data Insights</h5>
+                <p class="small">Track attendance, leaves, and growth trends via analytics.</p>
+                <a asp-controller="Account" asp-action="Login" class="btn btn-outline-light btn-sm">View</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="text-center mt-5">
+        <a asp-controller="Account" asp-action="Login" class="btn btn-warning px-4 py-2 me-2">🔑 Login</a>
+        <a asp-controller="Account" asp-action="Register" class="btn btn-outline-light px-4 py-2">🧾 Register</a>
+    </div>
+
+    <footer>© 2025 <span class="text-warning">EMS</span> — Powered by ASP.NET Core MVC</footer>
+</div>
