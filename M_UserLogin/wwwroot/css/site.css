@@ -2,7 +2,7 @@ html {
   font-size: 14px;
 }
 
-@media (min-width: 768px) {
+media (min-width: 768px) {
   html {
     font-size: 16px;
   }
@@ -29,3 +29,34 @@ body {
 .form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
   text-align: start;
 }
+
+/* Global Text Fix for Dark Theme */
+body, td, th, label, p, span, input, select, option {
+    color: #fff !important;
+}
+
+/* Dropdown menu and select options */
+select, option {
+    background-color: #222 !important;
+    color: #fff !important;
+}
+
+/* Table text visibility */
+table {
+    color: #fff !important;
+}
+
+    table td, table th {
+        color: #fff !important;
+    }
+
+/* Buttons and hover clarity */
+button, .btn {
+    color: #fff !important;
+    background-color: #444 !important;
+    border: 1px solid #666;
+}
+
+    button:hover, .btn:hover {
+        background-color: #666 !important;
+    }

@@ -4,6 +4,8 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.EntityFrameworkCore;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace M_UserLogin.Controllers
 {
@@ -104,11 +106,16 @@ namespace M_UserLogin.Controllers
         [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Manage()
         {
+            // Fetch all attendance records (including users)
             var records = await _context.AttendanceRecords
                 .Include(a => a.User)
                 .OrderByDescending(a => a.Date)
                 .ToListAsync();
 
+            // Fetch all registered users (for absent list)
+            var allUsers = await _context.Users.ToListAsync();
+
+            ViewBag.AllUsers = allUsers; // send all registered users to the view
             return View(records);
         }
     }

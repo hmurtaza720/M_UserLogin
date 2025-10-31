@@ -1,5 +1,6 @@
 wwwroot\css\account.css
 wwwroot\css\site.css
+wwwroot\css\tech-vibe.css
 wwwroot\favicon.ico
 wwwroot\Images\account-bg.jpg
 wwwroot\Images\Background.jpg
@@ -67,6 +68,7 @@ wwwroot\lib\jquery\dist\jquery.slim.min.map
 wwwroot\lib\jquery\LICENSE.txt
 C:\Users\i_murtaza\Git C#\C-\M_UserLogin\M_UserLogin\wwwroot\css\account.css
 C:\Users\i_murtaza\Git C#\C-\M_UserLogin\M_UserLogin\wwwroot\css\site.css
+C:\Users\i_murtaza\Git C#\C-\M_UserLogin\M_UserLogin\wwwroot\css\tech-vibe.css
 C:\Users\i_murtaza\Git C#\C-\M_UserLogin\M_UserLogin\wwwroot\favicon.ico
 C:\Users\i_murtaza\Git C#\C-\M_UserLogin\M_UserLogin\wwwroot\js\site.js
 C:\Users\i_murtaza\Git C#\C-\M_UserLogin\M_UserLogin\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css

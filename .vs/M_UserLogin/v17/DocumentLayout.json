@@ -3,36 +3,116 @@
   "WorkspaceRootPath": "C:\\Users\\i_murtaza\\Git C#\\C-\\M_UserLogin\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{AEC2C4D4-6A4E-4EA8-9C84-212590975357}|M_UserLogin\\M_UserLogin.csproj|c:\\users\\i_murtaza\\git c#\\c-\\m_userlogin\\m_userlogin\\views\\shared\\_accountlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{AEC2C4D4-6A4E-4EA8-9C84-212590975357}|M_UserLogin\\M_UserLogin.csproj|solutionrelative:m_userlogin\\views\\shared\\_accountlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AEC2C4D4-6A4E-4EA8-9C84-212590975357}|M_UserLogin\\M_UserLogin.csproj|c:\\users\\i_murtaza\\git c#\\c-\\m_userlogin\\m_userlogin\\views\\account\\verifyemail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{AEC2C4D4-6A4E-4EA8-9C84-212590975357}|M_UserLogin\\M_UserLogin.csproj|solutionrelative:m_userlogin\\views\\account\\verifyemail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AEC2C4D4-6A4E-4EA8-9C84-212590975357}|M_UserLogin\\M_UserLogin.csproj|c:\\users\\i_murtaza\\git c#\\c-\\m_userlogin\\m_userlogin\\views\\account\\changepassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{AEC2C4D4-6A4E-4EA8-9C84-212590975357}|M_UserLogin\\M_UserLogin.csproj|solutionrelative:m_userlogin\\views\\account\\changepassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{AEC2C4D4-6A4E-4EA8-9C84-212590975357}|M_UserLogin\\M_UserLogin.csproj|c:\\users\\i_murtaza\\git c#\\c-\\m_userlogin\\m_userlogin\\views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{AEC2C4D4-6A4E-4EA8-9C84-212590975357}|M_UserLogin\\M_UserLogin.csproj|solutionrelative:m_userlogin\\views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AEC2C4D4-6A4E-4EA8-9C84-212590975357}|M_UserLogin\\M_UserLogin.csproj|c:\\users\\i_murtaza\\git c#\\c-\\m_userlogin\\m_userlogin\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{AEC2C4D4-6A4E-4EA8-9C84-212590975357}|M_UserLogin\\M_UserLogin.csproj|solutionrelative:m_userlogin\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{AEC2C4D4-6A4E-4EA8-9C84-212590975357}|M_UserLogin\\M_UserLogin.csproj|c:\\users\\i_murtaza\\git c#\\c-\\m_userlogin\\m_userlogin\\controllers\\leavecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AEC2C4D4-6A4E-4EA8-9C84-212590975357}|M_UserLogin\\M_UserLogin.csproj|solutionrelative:m_userlogin\\controllers\\leavecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEC2C4D4-6A4E-4EA8-9C84-212590975357}|M_UserLogin\\M_UserLogin.csproj|c:\\users\\i_murtaza\\git c#\\c-\\m_userlogin\\m_userlogin\\views\\leave\\myleaves.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AEC2C4D4-6A4E-4EA8-9C84-212590975357}|M_UserLogin\\M_UserLogin.csproj|solutionrelative:m_userlogin\\views\\leave\\myleaves.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEC2C4D4-6A4E-4EA8-9C84-212590975357}|M_UserLogin\\M_UserLogin.csproj|c:\\users\\i_murtaza\\git c#\\c-\\m_userlogin\\m_userlogin\\views\\leave\\manage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AEC2C4D4-6A4E-4EA8-9C84-212590975357}|M_UserLogin\\M_UserLogin.csproj|solutionrelative:m_userlogin\\views\\leave\\manage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEC2C4D4-6A4E-4EA8-9C84-212590975357}|M_UserLogin\\M_UserLogin.csproj|c:\\users\\i_murtaza\\git c#\\c-\\m_userlogin\\m_userlogin\\views\\leave\\apply.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AEC2C4D4-6A4E-4EA8-9C84-212590975357}|M_UserLogin\\M_UserLogin.csproj|solutionrelative:m_userlogin\\views\\leave\\apply.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEC2C4D4-6A4E-4EA8-9C84-212590975357}|M_UserLogin\\M_UserLogin.csproj|c:\\users\\i_murtaza\\git c#\\c-\\m_userlogin\\m_userlogin\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AEC2C4D4-6A4E-4EA8-9C84-212590975357}|M_UserLogin\\M_UserLogin.csproj|solutionrelative:m_userlogin\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEC2C4D4-6A4E-4EA8-9C84-212590975357}|M_UserLogin\\M_UserLogin.csproj|c:\\users\\i_murtaza\\git c#\\c-\\m_userlogin\\m_userlogin\\views\\attendance\\manage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AEC2C4D4-6A4E-4EA8-9C84-212590975357}|M_UserLogin\\M_UserLogin.csproj|solutionrelative:m_userlogin\\views\\attendance\\manage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{AEC2C4D4-6A4E-4EA8-9C84-212590975357}|M_UserLogin\\M_UserLogin.csproj|c:\\users\\i_murtaza\\git c#\\c-\\m_userlogin\\m_userlogin\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{AEC2C4D4-6A4E-4EA8-9C84-212590975357}|M_UserLogin\\M_UserLogin.csproj|solutionrelative:m_userlogin\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AEC2C4D4-6A4E-4EA8-9C84-212590975357}|M_UserLogin\\M_UserLogin.csproj|c:\\users\\i_murtaza\\git c#\\c-\\m_userlogin\\m_userlogin\\views\\home\\welcome.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{AEC2C4D4-6A4E-4EA8-9C84-212590975357}|M_UserLogin\\M_UserLogin.csproj|solutionrelative:m_userlogin\\views\\home\\welcome.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{AEC2C4D4-6A4E-4EA8-9C84-212590975357}|M_UserLogin\\M_UserLogin.csproj|c:\\users\\i_murtaza\\git c#\\c-\\m_userlogin\\m_userlogin\\migrations\\20251031083739_addleavebalancestousers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AEC2C4D4-6A4E-4EA8-9C84-212590975357}|M_UserLogin\\M_UserLogin.csproj|solutionrelative:m_userlogin\\migrations\\20251031083739_addleavebalancestousers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEC2C4D4-6A4E-4EA8-9C84-212590975357}|M_UserLogin\\M_UserLogin.csproj|c:\\users\\i_murtaza\\git c#\\c-\\m_userlogin\\m_userlogin\\models\\users.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AEC2C4D4-6A4E-4EA8-9C84-212590975357}|M_UserLogin\\M_UserLogin.csproj|solutionrelative:m_userlogin\\models\\users.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEC2C4D4-6A4E-4EA8-9C84-212590975357}|M_UserLogin\\M_UserLogin.csproj|c:\\users\\i_murtaza\\git c#\\c-\\m_userlogin\\m_userlogin\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AEC2C4D4-6A4E-4EA8-9C84-212590975357}|M_UserLogin\\M_UserLogin.csproj|solutionrelative:m_userlogin\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEC2C4D4-6A4E-4EA8-9C84-212590975357}|M_UserLogin\\M_UserLogin.csproj|c:\\users\\i_murtaza\\git c#\\c-\\m_userlogin\\m_userlogin\\models\\leaverequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AEC2C4D4-6A4E-4EA8-9C84-212590975357}|M_UserLogin\\M_UserLogin.csproj|solutionrelative:m_userlogin\\models\\leaverequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEC2C4D4-6A4E-4EA8-9C84-212590975357}|M_UserLogin\\M_UserLogin.csproj|c:\\users\\i_murtaza\\git c#\\c-\\m_userlogin\\m_userlogin\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AEC2C4D4-6A4E-4EA8-9C84-212590975357}|M_UserLogin\\M_UserLogin.csproj|solutionrelative:m_userlogin\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEC2C4D4-6A4E-4EA8-9C84-212590975357}|M_UserLogin\\M_UserLogin.csproj|c:\\users\\i_murtaza\\git c#\\c-\\m_userlogin\\m_userlogin\\views\\shared\\_accountlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AEC2C4D4-6A4E-4EA8-9C84-212590975357}|M_UserLogin\\M_UserLogin.csproj|solutionrelative:m_userlogin\\views\\shared\\_accountlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEC2C4D4-6A4E-4EA8-9C84-212590975357}|M_UserLogin\\M_UserLogin.csproj|c:\\users\\i_murtaza\\git c#\\c-\\m_userlogin\\m_userlogin\\views\\account\\changepassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AEC2C4D4-6A4E-4EA8-9C84-212590975357}|M_UserLogin\\M_UserLogin.csproj|solutionrelative:m_userlogin\\views\\account\\changepassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEC2C4D4-6A4E-4EA8-9C84-212590975357}|M_UserLogin\\M_UserLogin.csproj|c:\\users\\i_murtaza\\git c#\\c-\\m_userlogin\\m_userlogin\\views\\account\\verifyemail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AEC2C4D4-6A4E-4EA8-9C84-212590975357}|M_UserLogin\\M_UserLogin.csproj|solutionrelative:m_userlogin\\views\\account\\verifyemail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEC2C4D4-6A4E-4EA8-9C84-212590975357}|M_UserLogin\\M_UserLogin.csproj|c:\\users\\i_murtaza\\git c#\\c-\\m_userlogin\\m_userlogin\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AEC2C4D4-6A4E-4EA8-9C84-212590975357}|M_UserLogin\\M_UserLogin.csproj|solutionrelative:m_userlogin\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEC2C4D4-6A4E-4EA8-9C84-212590975357}|M_UserLogin\\M_UserLogin.csproj|c:\\users\\i_murtaza\\git c#\\c-\\m_userlogin\\m_userlogin\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AEC2C4D4-6A4E-4EA8-9C84-212590975357}|M_UserLogin\\M_UserLogin.csproj|solutionrelative:m_userlogin\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEC2C4D4-6A4E-4EA8-9C84-212590975357}|M_UserLogin\\M_UserLogin.csproj|c:\\users\\i_murtaza\\git c#\\c-\\m_userlogin\\m_userlogin\\views\\shared\\error.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AEC2C4D4-6A4E-4EA8-9C84-212590975357}|M_UserLogin\\M_UserLogin.csproj|solutionrelative:m_userlogin\\views\\shared\\error.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEC2C4D4-6A4E-4EA8-9C84-212590975357}|M_UserLogin\\M_UserLogin.csproj|c:\\users\\i_murtaza\\git c#\\c-\\m_userlogin\\m_userlogin\\views\\shared\\accessdenied.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AEC2C4D4-6A4E-4EA8-9C84-212590975357}|M_UserLogin\\M_UserLogin.csproj|solutionrelative:m_userlogin\\views\\shared\\accessdenied.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEC2C4D4-6A4E-4EA8-9C84-212590975357}|M_UserLogin\\M_UserLogin.csproj|c:\\users\\i_murtaza\\git c#\\c-\\m_userlogin\\m_userlogin\\controllers\\attendancecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AEC2C4D4-6A4E-4EA8-9C84-212590975357}|M_UserLogin\\M_UserLogin.csproj|solutionrelative:m_userlogin\\controllers\\attendancecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{AEC2C4D4-6A4E-4EA8-9C84-212590975357}|M_UserLogin\\M_UserLogin.csproj|c:\\users\\i_murtaza\\git c#\\c-\\m_userlogin\\m_userlogin\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{AEC2C4D4-6A4E-4EA8-9C84-212590975357}|M_UserLogin\\M_UserLogin.csproj|solutionrelative:m_userlogin\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEC2C4D4-6A4E-4EA8-9C84-212590975357}|M_UserLogin\\M_UserLogin.csproj|c:\\users\\i_murtaza\\git c#\\c-\\m_userlogin\\m_userlogin\\views\\admin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AEC2C4D4-6A4E-4EA8-9C84-212590975357}|M_UserLogin\\M_UserLogin.csproj|solutionrelative:m_userlogin\\views\\admin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEC2C4D4-6A4E-4EA8-9C84-212590975357}|M_UserLogin\\M_UserLogin.csproj|c:\\users\\i_murtaza\\git c#\\c-\\m_userlogin\\m_userlogin\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{AEC2C4D4-6A4E-4EA8-9C84-212590975357}|M_UserLogin\\M_UserLogin.csproj|solutionrelative:m_userlogin\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEC2C4D4-6A4E-4EA8-9C84-212590975357}|M_UserLogin\\M_UserLogin.csproj|c:\\users\\i_murtaza\\git c#\\c-\\m_userlogin\\m_userlogin\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AEC2C4D4-6A4E-4EA8-9C84-212590975357}|M_UserLogin\\M_UserLogin.csproj|solutionrelative:m_userlogin\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEC2C4D4-6A4E-4EA8-9C84-212590975357}|M_UserLogin\\M_UserLogin.csproj|c:\\users\\i_murtaza\\git c#\\c-\\m_userlogin\\m_userlogin\\views\\home\\welcome.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AEC2C4D4-6A4E-4EA8-9C84-212590975357}|M_UserLogin\\M_UserLogin.csproj|solutionrelative:m_userlogin\\views\\home\\welcome.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEC2C4D4-6A4E-4EA8-9C84-212590975357}|M_UserLogin\\M_UserLogin.csproj|c:\\users\\i_murtaza\\git c#\\c-\\m_userlogin\\m_userlogin\\wwwroot\\css\\tech-vibe.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{AEC2C4D4-6A4E-4EA8-9C84-212590975357}|M_UserLogin\\M_UserLogin.csproj|solutionrelative:m_userlogin\\wwwroot\\css\\tech-vibe.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEC2C4D4-6A4E-4EA8-9C84-212590975357}|M_UserLogin\\M_UserLogin.csproj|c:\\users\\i_murtaza\\git c#\\c-\\m_userlogin\\m_userlogin\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{AEC2C4D4-6A4E-4EA8-9C84-212590975357}|M_UserLogin\\M_UserLogin.csproj|solutionrelative:m_userlogin\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{AEC2C4D4-6A4E-4EA8-9C84-212590975357}|M_UserLogin\\M_UserLogin.csproj|c:\\users\\i_murtaza\\git c#\\c-\\m_userlogin\\m_userlogin\\views\\analytics\\dashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -51,10 +131,6 @@
       "RelativeMoniker": "D:0:0:{AEC2C4D4-6A4E-4EA8-9C84-212590975357}|M_UserLogin\\M_UserLogin.csproj|solutionrelative:m_userlogin\\models\\attendancerecord.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AEC2C4D4-6A4E-4EA8-9C84-212590975357}|M_UserLogin\\M_UserLogin.csproj|c:\\users\\i_murtaza\\git c#\\c-\\m_userlogin\\m_userlogin\\views\\attendance\\manage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{AEC2C4D4-6A4E-4EA8-9C84-212590975357}|M_UserLogin\\M_UserLogin.csproj|solutionrelative:m_userlogin\\views\\attendance\\manage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{AEC2C4D4-6A4E-4EA8-9C84-212590975357}|M_UserLogin\\M_UserLogin.csproj|c:\\users\\i_murtaza\\git c#\\c-\\m_userlogin\\m_userlogin\\views\\attendance\\myattendance.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{AEC2C4D4-6A4E-4EA8-9C84-212590975357}|M_UserLogin\\M_UserLogin.csproj|solutionrelative:m_userlogin\\views\\attendance\\myattendance.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -63,44 +139,12 @@
       "RelativeMoniker": "D:0:0:{AEC2C4D4-6A4E-4EA8-9C84-212590975357}|M_UserLogin\\M_UserLogin.csproj|solutionrelative:m_userlogin\\views\\attendance\\mark.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AEC2C4D4-6A4E-4EA8-9C84-212590975357}|M_UserLogin\\M_UserLogin.csproj|c:\\users\\i_murtaza\\git c#\\c-\\m_userlogin\\m_userlogin\\controllers\\attendancecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AEC2C4D4-6A4E-4EA8-9C84-212590975357}|M_UserLogin\\M_UserLogin.csproj|solutionrelative:m_userlogin\\controllers\\attendancecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AEC2C4D4-6A4E-4EA8-9C84-212590975357}|M_UserLogin\\M_UserLogin.csproj|c:\\users\\i_murtaza\\git c#\\c-\\m_userlogin\\m_userlogin\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AEC2C4D4-6A4E-4EA8-9C84-212590975357}|M_UserLogin\\M_UserLogin.csproj|solutionrelative:m_userlogin\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AEC2C4D4-6A4E-4EA8-9C84-212590975357}|M_UserLogin\\M_UserLogin.csproj|c:\\users\\i_murtaza\\git c#\\c-\\m_userlogin\\m_userlogin\\views\\admin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{AEC2C4D4-6A4E-4EA8-9C84-212590975357}|M_UserLogin\\M_UserLogin.csproj|solutionrelative:m_userlogin\\views\\admin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{AEC2C4D4-6A4E-4EA8-9C84-212590975357}|M_UserLogin\\M_UserLogin.csproj|c:\\users\\i_murtaza\\git c#\\c-\\m_userlogin\\m_userlogin\\viewmodels\\registerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AEC2C4D4-6A4E-4EA8-9C84-212590975357}|M_UserLogin\\M_UserLogin.csproj|solutionrelative:m_userlogin\\viewmodels\\registerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{AEC2C4D4-6A4E-4EA8-9C84-212590975357}|M_UserLogin\\M_UserLogin.csproj|c:\\users\\i_murtaza\\git c#\\c-\\m_userlogin\\m_userlogin\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AEC2C4D4-6A4E-4EA8-9C84-212590975357}|M_UserLogin\\M_UserLogin.csproj|solutionrelative:m_userlogin\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AEC2C4D4-6A4E-4EA8-9C84-212590975357}|M_UserLogin\\M_UserLogin.csproj|c:\\users\\i_murtaza\\git c#\\c-\\m_userlogin\\m_userlogin\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AEC2C4D4-6A4E-4EA8-9C84-212590975357}|M_UserLogin\\M_UserLogin.csproj|solutionrelative:m_userlogin\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AEC2C4D4-6A4E-4EA8-9C84-212590975357}|M_UserLogin\\M_UserLogin.csproj|c:\\users\\i_murtaza\\git c#\\c-\\m_userlogin\\m_userlogin\\views\\leave\\myleaves.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{AEC2C4D4-6A4E-4EA8-9C84-212590975357}|M_UserLogin\\M_UserLogin.csproj|solutionrelative:m_userlogin\\views\\leave\\myleaves.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AEC2C4D4-6A4E-4EA8-9C84-212590975357}|M_UserLogin\\M_UserLogin.csproj|c:\\users\\i_murtaza\\git c#\\c-\\m_userlogin\\m_userlogin\\views\\leave\\apply.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{AEC2C4D4-6A4E-4EA8-9C84-212590975357}|M_UserLogin\\M_UserLogin.csproj|solutionrelative:m_userlogin\\views\\leave\\apply.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AEC2C4D4-6A4E-4EA8-9C84-212590975357}|M_UserLogin\\M_UserLogin.csproj|c:\\users\\i_murtaza\\git c#\\c-\\m_userlogin\\m_userlogin\\views\\leave\\manage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{AEC2C4D4-6A4E-4EA8-9C84-212590975357}|M_UserLogin\\M_UserLogin.csproj|solutionrelative:m_userlogin\\views\\leave\\manage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AEC2C4D4-6A4E-4EA8-9C84-212590975357}|M_UserLogin\\M_UserLogin.csproj|c:\\users\\i_murtaza\\git c#\\c-\\m_userlogin\\m_userlogin\\controllers\\leavecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AEC2C4D4-6A4E-4EA8-9C84-212590975357}|M_UserLogin\\M_UserLogin.csproj|solutionrelative:m_userlogin\\controllers\\leavecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{AEC2C4D4-6A4E-4EA8-9C84-212590975357}|M_UserLogin\\M_UserLogin.csproj|c:\\users\\i_murtaza\\git c#\\c-\\m_userlogin\\m_userlogin\\migrations\\20251029084252_adduserrelationtoleave.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -115,10 +159,6 @@
       "RelativeMoniker": "D:0:0:{AEC2C4D4-6A4E-4EA8-9C84-212590975357}|M_UserLogin\\M_UserLogin.csproj|solutionrelative:m_userlogin\\migrations\\20251029101748_addleaveuserrelation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AEC2C4D4-6A4E-4EA8-9C84-212590975357}|M_UserLogin\\M_UserLogin.csproj|c:\\users\\i_murtaza\\git c#\\c-\\m_userlogin\\m_userlogin\\models\\leaverequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AEC2C4D4-6A4E-4EA8-9C84-212590975357}|M_UserLogin\\M_UserLogin.csproj|solutionrelative:m_userlogin\\models\\leaverequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{AEC2C4D4-6A4E-4EA8-9C84-212590975357}|M_UserLogin\\M_UserLogin.csproj|c:\\users\\i_murtaza\\git c#\\c-\\m_userlogin\\m_userlogin\\migrations\\20251029081755_addleaverequesttable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AEC2C4D4-6A4E-4EA8-9C84-212590975357}|M_UserLogin\\M_UserLogin.csproj|solutionrelative:m_userlogin\\migrations\\20251029081755_addleaverequesttable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -127,20 +167,8 @@
       "RelativeMoniker": "D:0:0:{AEC2C4D4-6A4E-4EA8-9C84-212590975357}|M_UserLogin\\M_UserLogin.csproj|solutionrelative:m_userlogin\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AEC2C4D4-6A4E-4EA8-9C84-212590975357}|M_UserLogin\\M_UserLogin.csproj|c:\\users\\i_murtaza\\git c#\\c-\\m_userlogin\\m_userlogin\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AEC2C4D4-6A4E-4EA8-9C84-212590975357}|M_UserLogin\\M_UserLogin.csproj|solutionrelative:m_userlogin\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AEC2C4D4-6A4E-4EA8-9C84-212590975357}|M_UserLogin\\M_UserLogin.csproj|c:\\users\\i_murtaza\\git c#\\c-\\m_userlogin\\m_userlogin\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{AEC2C4D4-6A4E-4EA8-9C84-212590975357}|M_UserLogin\\M_UserLogin.csproj|solutionrelative:m_userlogin\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{AEC2C4D4-6A4E-4EA8-9C84-212590975357}|M_UserLogin\\M_UserLogin.csproj|c:\\users\\i_murtaza\\git c#\\c-\\m_userlogin\\m_userlogin\\viewmodels\\changepasswordviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AEC2C4D4-6A4E-4EA8-9C84-212590975357}|M_UserLogin\\M_UserLogin.csproj|solutionrelative:m_userlogin\\viewmodels\\changepasswordviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AEC2C4D4-6A4E-4EA8-9C84-212590975357}|M_UserLogin\\M_UserLogin.csproj|c:\\users\\i_murtaza\\git c#\\c-\\m_userlogin\\m_userlogin\\models\\users.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AEC2C4D4-6A4E-4EA8-9C84-212590975357}|M_UserLogin\\M_UserLogin.csproj|solutionrelative:m_userlogin\\models\\users.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{AEC2C4D4-6A4E-4EA8-9C84-212590975357}|M_UserLogin\\M_UserLogin.csproj|c:\\users\\i_murtaza\\git c#\\c-\\m_userlogin\\m_userlogin\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -157,10 +185,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{AEC2C4D4-6A4E-4EA8-9C84-212590975357}|M_UserLogin\\M_UserLogin.csproj|c:\\users\\i_murtaza\\git c#\\c-\\m_userlogin\\m_userlogin\\views\\shared\\_loginpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{AEC2C4D4-6A4E-4EA8-9C84-212590975357}|M_UserLogin\\M_UserLogin.csproj|solutionrelative:m_userlogin\\views\\shared\\_loginpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AEC2C4D4-6A4E-4EA8-9C84-212590975357}|M_UserLogin\\M_UserLogin.csproj|c:\\users\\i_murtaza\\git c#\\c-\\m_userlogin\\m_userlogin\\views\\shared\\accessdenied.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{AEC2C4D4-6A4E-4EA8-9C84-212590975357}|M_UserLogin\\M_UserLogin.csproj|solutionrelative:m_userlogin\\views\\shared\\accessdenied.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{AEC2C4D4-6A4E-4EA8-9C84-212590975357}|M_UserLogin\\M_UserLogin.csproj|c:\\users\\i_murtaza\\git c#\\c-\\m_userlogin\\m_userlogin\\jwt-test.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
@@ -194,19 +218,97 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 8,
+              "Title": "20251031083739_AddLeaveBalancesToUsers.cs",
+              "DocumentMoniker": "C:\\Users\\i_murtaza\\Git C#\\C-\\M_UserLogin\\M_UserLogin\\Migrations\\20251031083739_AddLeaveBalancesToUsers.cs",
+              "RelativeDocumentMoniker": "M_UserLogin\\Migrations\\20251031083739_AddLeaveBalancesToUsers.cs",
+              "ToolTip": "C:\\Users\\i_murtaza\\Git C#\\C-\\M_UserLogin\\M_UserLogin\\Migrations\\20251031083739_AddLeaveBalancesToUsers.cs",
+              "RelativeToolTip": "M_UserLogin\\Migrations\\20251031083739_AddLeaveBalancesToUsers.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-31T08:37:40.223Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "_ViewStart.cshtml",
+              "DocumentMoniker": "C:\\Users\\i_murtaza\\Git C#\\C-\\M_UserLogin\\M_UserLogin\\Views\\_ViewStart.cshtml",
+              "RelativeDocumentMoniker": "M_UserLogin\\Views\\_ViewStart.cshtml",
+              "ToolTip": "C:\\Users\\i_murtaza\\Git C#\\C-\\M_UserLogin\\M_UserLogin\\Views\\_ViewStart.cshtml",
+              "RelativeToolTip": "M_UserLogin\\Views\\_ViewStart.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-31T08:22:06.083Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "_ViewImports.cshtml",
+              "DocumentMoniker": "C:\\Users\\i_murtaza\\Git C#\\C-\\M_UserLogin\\M_UserLogin\\Views\\_ViewImports.cshtml",
+              "RelativeDocumentMoniker": "M_UserLogin\\Views\\_ViewImports.cshtml",
+              "ToolTip": "C:\\Users\\i_murtaza\\Git C#\\C-\\M_UserLogin\\M_UserLogin\\Views\\_ViewImports.cshtml",
+              "RelativeToolTip": "M_UserLogin\\Views\\_ViewImports.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-31T08:22:03.934Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Error.cshtml",
+              "DocumentMoniker": "C:\\Users\\i_murtaza\\Git C#\\C-\\M_UserLogin\\M_UserLogin\\Views\\Shared\\Error.cshtml",
+              "RelativeDocumentMoniker": "M_UserLogin\\Views\\Shared\\Error.cshtml",
+              "ToolTip": "C:\\Users\\i_murtaza\\Git C#\\C-\\M_UserLogin\\M_UserLogin\\Views\\Shared\\Error.cshtml",
+              "RelativeToolTip": "M_UserLogin\\Views\\Shared\\Error.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-31T08:21:58.982Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "site.css",
+              "DocumentMoniker": "C:\\Users\\i_murtaza\\Git C#\\C-\\M_UserLogin\\M_UserLogin\\wwwroot\\css\\site.css",
+              "RelativeDocumentMoniker": "M_UserLogin\\wwwroot\\css\\site.css",
+              "ToolTip": "C:\\Users\\i_murtaza\\Git C#\\C-\\M_UserLogin\\M_UserLogin\\wwwroot\\css\\site.css",
+              "RelativeToolTip": "M_UserLogin\\wwwroot\\css\\site.css",
+              "ViewState": "AgIAADAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-10-31T07:17:15.272Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "tech-vibe.css",
+              "DocumentMoniker": "C:\\Users\\i_murtaza\\Git C#\\C-\\M_UserLogin\\M_UserLogin\\wwwroot\\css\\tech-vibe.css",
+              "RelativeDocumentMoniker": "M_UserLogin\\wwwroot\\css\\tech-vibe.css",
+              "ToolTip": "C:\\Users\\i_murtaza\\Git C#\\C-\\M_UserLogin\\M_UserLogin\\wwwroot\\css\\tech-vibe.css",
+              "RelativeToolTip": "M_UserLogin\\wwwroot\\css\\tech-vibe.css",
+              "ViewState": "AgIAAI0AAAAAAAAAAAAUwKMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-10-29T16:38:04.305Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "Manage.cshtml",
               "DocumentMoniker": "C:\\Users\\i_murtaza\\Git C#\\C-\\M_UserLogin\\M_UserLogin\\Views\\Attendance\\Manage.cshtml",
               "RelativeDocumentMoniker": "M_UserLogin\\Views\\Attendance\\Manage.cshtml",
               "ToolTip": "C:\\Users\\i_murtaza\\Git C#\\C-\\M_UserLogin\\M_UserLogin\\Views\\Attendance\\Manage.cshtml",
               "RelativeToolTip": "M_UserLogin\\Views\\Attendance\\Manage.cshtml",
-              "ViewState": "AgIAABIAAAAAAAAAAAAUwCQAAAAZAAAAAAAAAA==",
+              "ViewState": "AgIAAGEAAAAAAAAAAAAiwHQAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-10-29T12:17:19.036Z"
+              "WhenOpened": "2025-10-29T12:17:19.036Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 32,
               "Title": "MyAttendance.cshtml",
               "DocumentMoniker": "C:\\Users\\i_murtaza\\Git C#\\C-\\M_UserLogin\\M_UserLogin\\Views\\Attendance\\MyAttendance.cshtml",
               "RelativeDocumentMoniker": "M_UserLogin\\Views\\Attendance\\MyAttendance.cshtml",
@@ -218,7 +320,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 33,
               "Title": "Mark.cshtml",
               "DocumentMoniker": "C:\\Users\\i_murtaza\\Git C#\\C-\\M_UserLogin\\M_UserLogin\\Views\\Attendance\\Mark.cshtml",
               "RelativeDocumentMoniker": "M_UserLogin\\Views\\Attendance\\Mark.cshtml",
@@ -230,19 +332,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 20,
               "Title": "AttendanceController.cs",
               "DocumentMoniker": "C:\\Users\\i_murtaza\\Git C#\\C-\\M_UserLogin\\M_UserLogin\\Controllers\\AttendanceController.cs",
               "RelativeDocumentMoniker": "M_UserLogin\\Controllers\\AttendanceController.cs",
               "ToolTip": "C:\\Users\\i_murtaza\\Git C#\\C-\\M_UserLogin\\M_UserLogin\\Controllers\\AttendanceController.cs",
               "RelativeToolTip": "M_UserLogin\\Controllers\\AttendanceController.cs",
-              "ViewState": "AgIAAFgAAAAAAAAAAAAiwGgAAAAxAAAAAAAAAA==",
+              "ViewState": "AgIAAF8AAAAAAAAAAAAiwGoAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-29T12:15:48.451Z"
+              "WhenOpened": "2025-10-29T12:15:48.451Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 50,
               "Title": "20251029121516_AddAttendanceTable.cs",
               "DocumentMoniker": "C:\\Users\\i_murtaza\\Git C#\\C-\\M_UserLogin\\M_UserLogin\\Migrations\\20251029121516_AddAttendanceTable.cs",
               "RelativeDocumentMoniker": "M_UserLogin\\Migrations\\20251029121516_AddAttendanceTable.cs",
@@ -254,7 +357,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 31,
               "Title": "AttendanceRecord.cs",
               "DocumentMoniker": "C:\\Users\\i_murtaza\\Git C#\\C-\\M_UserLogin\\M_UserLogin\\Models\\AttendanceRecord.cs",
               "RelativeDocumentMoniker": "M_UserLogin\\Models\\AttendanceRecord.cs",
@@ -266,7 +369,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 38,
               "Title": "20251029101748_AddLeaveUserRelation.cs",
               "DocumentMoniker": "C:\\Users\\i_murtaza\\Git C#\\C-\\M_UserLogin\\M_UserLogin\\Migrations\\20251029101748_AddLeaveUserRelation.cs",
               "RelativeDocumentMoniker": "M_UserLogin\\Migrations\\20251029101748_AddLeaveUserRelation.cs",
@@ -278,7 +381,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 37,
               "Title": "20251029095327_FixLeaveUserRelation.cs",
               "DocumentMoniker": "C:\\Users\\i_murtaza\\Git C#\\C-\\M_UserLogin\\M_UserLogin\\Migrations\\20251029095327_FixLeaveUserRelation.cs",
               "RelativeDocumentMoniker": "M_UserLogin\\Migrations\\20251029095327_FixLeaveUserRelation.cs",
@@ -290,7 +393,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 36,
               "Title": "20251029084252_AddUserRelationToLeave.cs",
               "DocumentMoniker": "C:\\Users\\i_murtaza\\Git C#\\C-\\M_UserLogin\\M_UserLogin\\Migrations\\20251029084252_AddUserRelationToLeave.cs",
               "RelativeDocumentMoniker": "M_UserLogin\\Migrations\\20251029084252_AddUserRelationToLeave.cs",
@@ -302,55 +405,59 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 3,
               "Title": "Manage.cshtml",
               "DocumentMoniker": "C:\\Users\\i_murtaza\\Git C#\\C-\\M_UserLogin\\M_UserLogin\\Views\\Leave\\Manage.cshtml",
               "RelativeDocumentMoniker": "M_UserLogin\\Views\\Leave\\Manage.cshtml",
               "ToolTip": "C:\\Users\\i_murtaza\\Git C#\\C-\\M_UserLogin\\M_UserLogin\\Views\\Leave\\Manage.cshtml",
               "RelativeToolTip": "M_UserLogin\\Views\\Leave\\Manage.cshtml",
-              "ViewState": "AgIAAC4AAAAAAAAAAAAUwEoAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAIgAAAAAAAAAAAAqwJAAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-10-29T08:36:01.691Z"
+              "WhenOpened": "2025-10-29T08:36:01.691Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 2,
               "Title": "MyLeaves.cshtml",
               "DocumentMoniker": "C:\\Users\\i_murtaza\\Git C#\\C-\\M_UserLogin\\M_UserLogin\\Views\\Leave\\MyLeaves.cshtml",
               "RelativeDocumentMoniker": "M_UserLogin\\Views\\Leave\\MyLeaves.cshtml",
               "ToolTip": "C:\\Users\\i_murtaza\\Git C#\\C-\\M_UserLogin\\M_UserLogin\\Views\\Leave\\MyLeaves.cshtml",
               "RelativeToolTip": "M_UserLogin\\Views\\Leave\\MyLeaves.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADEAAAAdAAAAAAAAAA==",
+              "ViewState": "AgIAAD0AAAAAAAAAAAAqwD8AAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-10-29T08:20:10.888Z"
+              "WhenOpened": "2025-10-29T08:20:10.888Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 4,
               "Title": "Apply.cshtml",
               "DocumentMoniker": "C:\\Users\\i_murtaza\\Git C#\\C-\\M_UserLogin\\M_UserLogin\\Views\\Leave\\Apply.cshtml",
               "RelativeDocumentMoniker": "M_UserLogin\\Views\\Leave\\Apply.cshtml",
               "ToolTip": "C:\\Users\\i_murtaza\\Git C#\\C-\\M_UserLogin\\M_UserLogin\\Views\\Leave\\Apply.cshtml",
               "RelativeToolTip": "M_UserLogin\\Views\\Leave\\Apply.cshtml",
-              "ViewState": "AgIAACMAAAAAAAAAAAAUwDoAAAAGAAAAAAAAAA==",
+              "ViewState": "AgIAADAAAAAAAAAAAAAqwCgAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-10-29T08:19:50.023Z"
+              "WhenOpened": "2025-10-29T08:19:50.023Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 1,
               "Title": "LeaveController.cs",
               "DocumentMoniker": "C:\\Users\\i_murtaza\\Git C#\\C-\\M_UserLogin\\M_UserLogin\\Controllers\\LeaveController.cs",
               "RelativeDocumentMoniker": "M_UserLogin\\Controllers\\LeaveController.cs",
               "ToolTip": "C:\\Users\\i_murtaza\\Git C#\\C-\\M_UserLogin\\M_UserLogin\\Controllers\\LeaveController.cs",
               "RelativeToolTip": "M_UserLogin\\Controllers\\LeaveController.cs",
-              "ViewState": "AgIAAGwAAAAAAAAAAAAiwIcAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAMQAAAAAAAAAAAAmwPAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-29T08:19:13.22Z"
+              "WhenOpened": "2025-10-29T08:19:13.22Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 39,
               "Title": "20251029081755_AddLeaveRequestTable.cs",
               "DocumentMoniker": "C:\\Users\\i_murtaza\\Git C#\\C-\\M_UserLogin\\M_UserLogin\\Migrations\\20251029081755_AddLeaveRequestTable.cs",
               "RelativeDocumentMoniker": "M_UserLogin\\Migrations\\20251029081755_AddLeaveRequestTable.cs",
@@ -362,31 +469,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 10,
               "Title": "AppDbContext.cs",
               "DocumentMoniker": "C:\\Users\\i_murtaza\\Git C#\\C-\\M_UserLogin\\M_UserLogin\\Data\\AppDbContext.cs",
               "RelativeDocumentMoniker": "M_UserLogin\\Data\\AppDbContext.cs",
               "ToolTip": "C:\\Users\\i_murtaza\\Git C#\\C-\\M_UserLogin\\M_UserLogin\\Data\\AppDbContext.cs",
               "RelativeToolTip": "M_UserLogin\\Data\\AppDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAADwvwoAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAwwBMAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-29T08:16:47.41Z"
+              "WhenOpened": "2025-10-29T08:16:47.41Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 11,
               "Title": "LeaveRequest.cs",
               "DocumentMoniker": "C:\\Users\\i_murtaza\\Git C#\\C-\\M_UserLogin\\M_UserLogin\\Models\\LeaveRequest.cs",
               "RelativeDocumentMoniker": "M_UserLogin\\Models\\LeaveRequest.cs",
               "ToolTip": "C:\\Users\\i_murtaza\\Git C#\\C-\\M_UserLogin\\M_UserLogin\\Models\\LeaveRequest.cs",
               "RelativeToolTip": "M_UserLogin\\Models\\LeaveRequest.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAiwCUAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABAAAAAAAAAAAAAowBwAAABBAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-29T08:16:29.723Z"
+              "WhenOpened": "2025-10-29T08:16:29.723Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 28,
               "Title": "Dashboard.cshtml",
               "DocumentMoniker": "C:\\Users\\i_murtaza\\Git C#\\C-\\M_UserLogin\\M_UserLogin\\Views\\Analytics\\Dashboard.cshtml",
               "RelativeDocumentMoniker": "M_UserLogin\\Views\\Analytics\\Dashboard.cshtml",
@@ -398,7 +507,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 29,
               "Title": "AnalyticsController.cs",
               "DocumentMoniker": "C:\\Users\\i_murtaza\\Git C#\\C-\\M_UserLogin\\M_UserLogin\\Controllers\\AnalyticsController.cs",
               "RelativeDocumentMoniker": "M_UserLogin\\Controllers\\AnalyticsController.cs",
@@ -410,7 +519,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 30,
               "Title": "AnalyticsViewModel.cs",
               "DocumentMoniker": "C:\\Users\\i_murtaza\\Git C#\\C-\\M_UserLogin\\M_UserLogin\\Models\\AnalyticsViewModel.cs",
               "RelativeDocumentMoniker": "M_UserLogin\\Models\\AnalyticsViewModel.cs",
@@ -422,7 +531,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 49,
               "Title": "20251028100402_AddSecretCodeToUsers.cs",
               "DocumentMoniker": "C:\\Users\\i_murtaza\\Git C#\\C-\\M_UserLogin\\M_UserLogin\\Migrations\\20251028100402_AddSecretCodeToUsers.cs",
               "RelativeDocumentMoniker": "M_UserLogin\\Migrations\\20251028100402_AddSecretCodeToUsers.cs",
@@ -434,7 +543,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 41,
               "Title": "ChangePasswordViewModel.cs",
               "DocumentMoniker": "C:\\Users\\i_murtaza\\Git C#\\C-\\M_UserLogin\\M_UserLogin\\ViewModels\\ChangePasswordViewModel.cs",
               "RelativeDocumentMoniker": "M_UserLogin\\ViewModels\\ChangePasswordViewModel.cs",
@@ -446,19 +555,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 9,
               "Title": "Users.cs",
               "DocumentMoniker": "C:\\Users\\i_murtaza\\Git C#\\C-\\M_UserLogin\\M_UserLogin\\Models\\Users.cs",
               "RelativeDocumentMoniker": "M_UserLogin\\Models\\Users.cs",
               "ToolTip": "C:\\Users\\i_murtaza\\Git C#\\C-\\M_UserLogin\\M_UserLogin\\Models\\Users.cs",
               "RelativeToolTip": "M_UserLogin\\Models\\Users.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAiwAsAAAA+AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-28T09:35:30.701Z"
+              "WhenOpened": "2025-10-28T09:35:30.701Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 43,
               "Title": "Privacy.cshtml",
               "DocumentMoniker": "C:\\Users\\i_murtaza\\Git C#\\C-\\M_UserLogin\\M_UserLogin\\Views\\Home\\Privacy.cshtml",
               "RelativeDocumentMoniker": "M_UserLogin\\Views\\Home\\Privacy.cshtml",
@@ -470,59 +580,59 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 12,
               "Title": "Login.cshtml",
               "DocumentMoniker": "C:\\Users\\i_murtaza\\Git C#\\C-\\M_UserLogin\\M_UserLogin\\Views\\Account\\Login.cshtml",
               "RelativeDocumentMoniker": "M_UserLogin\\Views\\Account\\Login.cshtml",
               "ToolTip": "C:\\Users\\i_murtaza\\Git C#\\C-\\M_UserLogin\\M_UserLogin\\Views\\Account\\Login.cshtml",
               "RelativeToolTip": "M_UserLogin\\Views\\Account\\Login.cshtml",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAUwB0AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACcAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-10-28T06:31:26.181Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "Register.cshtml",
               "DocumentMoniker": "C:\\Users\\i_murtaza\\Git C#\\C-\\M_UserLogin\\M_UserLogin\\Views\\Account\\Register.cshtml",
               "RelativeDocumentMoniker": "M_UserLogin\\Views\\Account\\Register.cshtml",
               "ToolTip": "C:\\Users\\i_murtaza\\Git C#\\C-\\M_UserLogin\\M_UserLogin\\Views\\Account\\Register.cshtml",
               "RelativeToolTip": "M_UserLogin\\Views\\Account\\Register.cshtml",
-              "ViewState": "AgIAABIAAAAAAAAAAAAUwC4AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAACcAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-10-28T06:30:59.889Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 15,
               "Title": "VerifyEmail.cshtml",
               "DocumentMoniker": "C:\\Users\\i_murtaza\\Git C#\\C-\\M_UserLogin\\M_UserLogin\\Views\\Account\\VerifyEmail.cshtml",
               "RelativeDocumentMoniker": "M_UserLogin\\Views\\Account\\VerifyEmail.cshtml",
               "ToolTip": "C:\\Users\\i_murtaza\\Git C#\\C-\\M_UserLogin\\M_UserLogin\\Views\\Account\\VerifyEmail.cshtml",
               "RelativeToolTip": "M_UserLogin\\Views\\Account\\VerifyEmail.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAUwBkAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-10-28T06:30:09.02Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 14,
               "Title": "ChangePassword.cshtml",
               "DocumentMoniker": "C:\\Users\\i_murtaza\\Git C#\\C-\\M_UserLogin\\M_UserLogin\\Views\\Account\\ChangePassword.cshtml",
               "RelativeDocumentMoniker": "M_UserLogin\\Views\\Account\\ChangePassword.cshtml",
               "ToolTip": "C:\\Users\\i_murtaza\\Git C#\\C-\\M_UserLogin\\M_UserLogin\\Views\\Account\\ChangePassword.cshtml",
               "RelativeToolTip": "M_UserLogin\\Views\\Account\\ChangePassword.cshtml",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAUwCcAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABkAAAAAAAAAAAAUwCcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-10-28T06:28:57.499Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 34,
               "Title": "RegisterViewModel.cs",
               "DocumentMoniker": "C:\\Users\\i_murtaza\\Git C#\\C-\\M_UserLogin\\M_UserLogin\\ViewModels\\RegisterViewModel.cs",
               "RelativeDocumentMoniker": "M_UserLogin\\ViewModels\\RegisterViewModel.cs",
@@ -534,7 +644,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 44,
               "Title": "LoginViewModel.cs",
               "DocumentMoniker": "C:\\Users\\i_murtaza\\Git C#\\C-\\M_UserLogin\\M_UserLogin\\ViewModels\\LoginViewModel.cs",
               "RelativeDocumentMoniker": "M_UserLogin\\ViewModels\\LoginViewModel.cs",
@@ -546,32 +656,32 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 24,
               "Title": "AccountController.cs",
               "DocumentMoniker": "C:\\Users\\i_murtaza\\Git C#\\C-\\M_UserLogin\\M_UserLogin\\Controllers\\AccountController.cs",
               "RelativeDocumentMoniker": "M_UserLogin\\Controllers\\AccountController.cs",
               "ToolTip": "C:\\Users\\i_murtaza\\Git C#\\C-\\M_UserLogin\\M_UserLogin\\Controllers\\AccountController.cs",
               "RelativeToolTip": "M_UserLogin\\Controllers\\AccountController.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAAwBMAAAAqAAAAAAAAAA==",
+              "ViewState": "AgIAAIIAAAAAAAAAAAAiwJ0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-28T06:27:00.67Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 13,
               "Title": "_AccountLayout.cshtml",
               "DocumentMoniker": "C:\\Users\\i_murtaza\\Git C#\\C-\\M_UserLogin\\M_UserLogin\\Views\\Shared\\_AccountLayout.cshtml",
               "RelativeDocumentMoniker": "M_UserLogin\\Views\\Shared\\_AccountLayout.cshtml",
               "ToolTip": "C:\\Users\\i_murtaza\\Git C#\\C-\\M_UserLogin\\M_UserLogin\\Views\\Shared\\_AccountLayout.cshtml",
               "RelativeToolTip": "M_UserLogin\\Views\\Shared\\_AccountLayout.cshtml",
-              "ViewState": "AgIAADkAAAAAAAAAAAAmwEgAAAAcAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAG4AAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-10-27T11:22:16.72Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 45,
               "Title": "_LoginPartial.cshtml",
               "DocumentMoniker": "C:\\Users\\i_murtaza\\Git C#\\C-\\M_UserLogin\\M_UserLogin\\Views\\Shared\\_LoginPartial.cshtml",
               "RelativeDocumentMoniker": "M_UserLogin\\Views\\Shared\\_LoginPartial.cshtml",
@@ -583,7 +693,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 19,
               "Title": "AccessDenied.cshtml",
               "DocumentMoniker": "C:\\Users\\i_murtaza\\Git C#\\C-\\M_UserLogin\\M_UserLogin\\Views\\Shared\\AccessDenied.cshtml",
               "RelativeDocumentMoniker": "M_UserLogin\\Views\\Shared\\AccessDenied.cshtml",
@@ -591,23 +701,25 @@
               "RelativeToolTip": "M_UserLogin\\Views\\Shared\\AccessDenied.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-10-27T10:41:37.503Z"
+              "WhenOpened": "2025-10-27T10:41:37.503Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 22,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\i_murtaza\\Git C#\\C-\\M_UserLogin\\M_UserLogin\\Views\\Admin\\Index.cshtml",
               "RelativeDocumentMoniker": "M_UserLogin\\Views\\Admin\\Index.cshtml",
               "ToolTip": "C:\\Users\\i_murtaza\\Git C#\\C-\\M_UserLogin\\M_UserLogin\\Views\\Admin\\Index.cshtml",
               "RelativeToolTip": "M_UserLogin\\Views\\Admin\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABsAAAAAAAAAAAAiwH4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-10-27T10:28:59.812Z"
+              "WhenOpened": "2025-10-27T10:28:59.812Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 35,
               "Title": "AdminController.cs",
               "DocumentMoniker": "C:\\Users\\i_murtaza\\Git C#\\C-\\M_UserLogin\\M_UserLogin\\Controllers\\AdminController.cs",
               "RelativeDocumentMoniker": "M_UserLogin\\Controllers\\AdminController.cs",
@@ -619,32 +731,31 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 27,
               "Title": "launchSettings.json",
               "DocumentMoniker": "C:\\Users\\i_murtaza\\Git C#\\C-\\M_UserLogin\\M_UserLogin\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "M_UserLogin\\Properties\\launchSettings.json",
               "ToolTip": "C:\\Users\\i_murtaza\\Git C#\\C-\\M_UserLogin\\M_UserLogin\\Properties\\launchSettings.json",
               "RelativeToolTip": "M_UserLogin\\Properties\\launchSettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABQAAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2025-10-24T12:42:43.955Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 25,
               "Title": "Welcome.cshtml",
               "DocumentMoniker": "C:\\Users\\i_murtaza\\Git C#\\C-\\M_UserLogin\\M_UserLogin\\Views\\Home\\Welcome.cshtml",
               "RelativeDocumentMoniker": "M_UserLogin\\Views\\Home\\Welcome.cshtml",
               "ToolTip": "C:\\Users\\i_murtaza\\Git C#\\C-\\M_UserLogin\\M_UserLogin\\Views\\Home\\Welcome.cshtml",
               "RelativeToolTip": "M_UserLogin\\Views\\Home\\Welcome.cshtml",
-              "ViewState": "AgIAABIAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAALYAAAAAAAAAAAAUwMUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-10-24T12:29:53.791Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-24T12:29:53.791Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 46,
               "Title": "jwt-test.http",
               "DocumentMoniker": "C:\\Users\\i_murtaza\\Git C#\\C-\\M_UserLogin\\M_UserLogin\\jwt-test.http",
               "RelativeDocumentMoniker": "M_UserLogin\\jwt-test.http",
@@ -656,7 +767,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 47,
               "Title": "AuthApiController.cs",
               "DocumentMoniker": "C:\\Users\\i_murtaza\\Git C#\\C-\\M_UserLogin\\M_UserLogin\\Controllers\\AuthApiController.cs",
               "RelativeDocumentMoniker": "M_UserLogin\\Controllers\\AuthApiController.cs",
@@ -668,7 +779,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 48,
               "Title": "JwtTokenService.cs",
               "DocumentMoniker": "C:\\Users\\i_murtaza\\Git C#\\C-\\M_UserLogin\\M_UserLogin\\Helpers\\JwtTokenService.cs",
               "RelativeDocumentMoniker": "M_UserLogin\\Helpers\\JwtTokenService.cs",
@@ -680,7 +791,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 40,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\i_murtaza\\Git C#\\C-\\M_UserLogin\\M_UserLogin\\appsettings.json",
               "RelativeDocumentMoniker": "M_UserLogin\\appsettings.json",
@@ -692,44 +803,46 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "C:\\Users\\i_murtaza\\Git C#\\C-\\M_UserLogin\\M_UserLogin\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "M_UserLogin\\Views\\Shared\\_Layout.cshtml",
               "ToolTip": "C:\\Users\\i_murtaza\\Git C#\\C-\\M_UserLogin\\M_UserLogin\\Views\\Shared\\_Layout.cshtml",
               "RelativeToolTip": "M_UserLogin\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAABgAAAAAAAAAAAAUwCcAAAAKAAAAAAAAAA==",
+              "ViewState": "AgIAAIMAAAAAAAAAAAAiwJEAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-10-24T07:03:36.889Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 21,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\i_murtaza\\Git C#\\C-\\M_UserLogin\\M_UserLogin\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "M_UserLogin\\Views\\Home\\Index.cshtml",
               "ToolTip": "C:\\Users\\i_murtaza\\Git C#\\C-\\M_UserLogin\\M_UserLogin\\Views\\Home\\Index.cshtml",
               "RelativeToolTip": "M_UserLogin\\Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAAJ8AAAAAAAAAAAAUwLAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAJcAAAAAAAAAAAAiwLIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-10-24T07:02:59.496Z"
+              "WhenOpened": "2025-10-24T07:02:59.496Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 5,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\i_murtaza\\Git C#\\C-\\M_UserLogin\\M_UserLogin\\Program.cs",
               "RelativeDocumentMoniker": "M_UserLogin\\Program.cs",
               "ToolTip": "C:\\Users\\i_murtaza\\Git C#\\C-\\M_UserLogin\\M_UserLogin\\Program.cs",
               "RelativeToolTip": "M_UserLogin\\Program.cs",
-              "ViewState": "AgIAAFMAAAAAAAAAAAAiwGUAAAAYAAAAAAAAAA==",
+              "ViewState": "AgIAAH8AAAAAAAAAAAAiwJEAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-24T12:34:20.363Z"
+              "WhenOpened": "2025-10-24T12:34:20.363Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 42,
               "Title": "HomeController.cs",
               "DocumentMoniker": "C:\\Users\\i_murtaza\\Git C#\\C-\\M_UserLogin\\M_UserLogin\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "M_UserLogin\\Controllers\\HomeController.cs",

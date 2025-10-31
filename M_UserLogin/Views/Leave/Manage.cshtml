@@ -8,9 +8,24 @@
     <div class="card shadow-lg p-4" style="background-color:#111; color:white; border:1px solid #ffc107;">
         <h3 class="text-warning text-center mb-4">🧾 Manage Leave Requests</h3>
 
+        <!-- ✅ Filter Buttons + Search Bar -->
+        <div class="d-flex justify-content-between align-items-center flex-wrap mb-3">
+            <div class="btn-group mb-2">
+                <button class="btn btn-outline-warning active" id="filterAll">All</button>
+                <button class="btn btn-outline-success" id="filterToday">Today</button>
+                <button class="btn btn-outline-info" id="filterWeek">This Week</button>
+            </div>
+
+            <input type="text" id="searchInput" class="form-control w-25 mb-2" placeholder="🔍 Search by user or email">
+        </div>
+
         @if (TempData["Message"] != null)
         {
             <div class="alert alert-success text-center">@TempData["Message"]</div>
+        }
+        @if (TempData["Error"] != null)
+        {
+            <div class="alert alert-danger text-center">@TempData["Error"]</div>
         }
 
         @if (!Model.Any())
@@ -19,56 +34,133 @@
         }
         else
         {
-            <table class="table table-dark table-striped text-center align-middle table-bordered border-warning">
-                <thead class="table-warning text-dark">
-                    <tr>
-                        <th>User</th>
-                        <th>Email</th>
-                        <th>Leave Type</th>
-                        <th>Start</th>
-                        <th>End</th>
-                        <th>Reason</th>
-                        <th>Status</th>
-                        <th>Requested On</th>
-                        <th>Actions</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @foreach (var leave in Model)
-                    {
+            <div class="table-responsive">
+                <table id="leaveTable" class="table table-dark table-striped text-center align-middle table-bordered border-warning">
+                    <thead class="table-warning text-dark">
                         <tr>
-                            <td>@leave.User?.FullName</td>
-                            <td>@leave.User?.Email</td>
-                            <td>@leave.LeaveType</td>
-                            <td>@leave.StartDate.ToShortDateString()</td>
-                            <td>@leave.EndDate.ToShortDateString()</td>
-                            <td>@leave.Reason</td>
-                            <td>
-                                @if (leave.Status == "Approved")
-                                { <span class="badge bg-success">Approved</span> }
-                                else if (leave.Status == "Rejected")
-                                { <span class="badge bg-danger">Rejected</span> }
-                                else
-                                { <span class="badge bg-warning text-dark">Pending</span> }
-                            </td>
-                            <td>@leave.RequestDate.ToShortDateString()</td>
-                            <td>
-                                @if (leave.Status == "Pending")
-                                {
-                                    <form asp-action="Approve" method="post" class="d-inline">
-                                        <input type="hidden" name="id" value="@leave.Id" />
-                                        <button type="submit" class="btn btn-success btn-sm">Approve</button>
-                                    </form>
-                                    <form asp-action="Reject" method="post" class="d-inline">
-                                        <input type="hidden" name="id" value="@leave.Id" />
-                                        <button type="submit" class="btn btn-danger btn-sm">Reject</button>
-                                    </form>
-                                }
-                            </td>
+                            <th>User</th>
+                            <th>Email</th>
+                            <th>Leave Type</th>
+                            <th>Start</th>
+                            <th>End</th>
+                            <th>Reason</th>
+                            <th>Status</th>
+                            <th>Requested On</th>
+                            <th>Remaining Leaves (C/S/A)</th>
+                            <th>Actions</th>
                         </tr>
-                    }
-                </tbody>
-            </table>
+                    </thead>
+                    <tbody>
+                        @foreach (var leave in Model)
+                        {
+                            <tr data-start="@leave.StartDate.ToString("yyyy-MM-dd")" data-request="@leave.RequestDate.ToString("yyyy-MM-dd")">
+                                <td>@leave.User?.FullName</td>
+                                <td>@leave.User?.Email</td>
+                                <td>@leave.LeaveType</td>
+                                <td>@leave.StartDate.ToShortDateString()</td>
+                                <td>@leave.EndDate.ToShortDateString()</td>
+                                <td>@leave.Reason</td>
+                                <td>
+                                    @if (leave.Status == "Approved")
+                                    {
+                                        <span class="badge bg-success">Approved</span>
+                                    }
+                                    else if (leave.Status == "Rejected")
+                                    {
+                                        <span class="badge bg-danger">Rejected</span>
+                                    }
+                                    else
+                                    {
+                                        <span class="badge bg-warning text-dark">Pending</span>
+                                    }
+                                </td>
+                                <td>@leave.RequestDate.ToShortDateString()</td>
+                                <td>
+                                    🟡 @leave.User?.CasualLeaveBalance /
+                                    🔵 @leave.User?.SickLeaveBalance /
+                                    🟢 @leave.User?.AnnualLeaveBalance
+                                </td>
+                                <td>
+                                    @if (leave.Status == "Pending")
+                                    {
+                                        <form asp-action="Approve" asp-controller="Leave" method="post" class="d-inline">
+                                            @Html.AntiForgeryToken()
+                                            <input type="hidden" name="id" value="@leave.Id" />
+                                            <button type="submit" class="btn btn-success btn-sm">Approve</button>
+                                        </form>
+                                        <form asp-action="Reject" asp-controller="Leave" method="post" class="d-inline">
+                                            @Html.AntiForgeryToken()
+                                            <input type="hidden" name="id" value="@leave.Id" />
+                                            <button type="submit" class="btn btn-danger btn-sm">Reject</button>
+                                        </form>
+                                    }
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
         }
     </div>
 </div>
+
+@section Scripts {
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const today = new Date();
+            const rows = document.querySelectorAll("#leaveTable tbody tr");
+            const btnAll = document.getElementById("filterAll");
+            const btnToday = document.getElementById("filterToday");
+            const btnWeek = document.getElementById("filterWeek");
+            const searchInput = document.getElementById("searchInput");
+
+            function isThisWeek(date) {
+                const first = today.getDate() - today.getDay();
+                const last = first + 6;
+                const weekStart = new Date(today.setDate(first));
+                const weekEnd = new Date(today.setDate(last));
+                return date >= weekStart && date <= weekEnd;
+            }
+
+            function resetActive(btn) {
+                [btnAll, btnToday, btnWeek].forEach(b => b.classList.remove("active"));
+                btn.classList.add("active");
+            }
+
+            btnAll.addEventListener("click", function () {
+                resetActive(this);
+                rows.forEach(r => r.style.display = "");
+            });
+
+            btnToday.addEventListener("click", function () {
+                resetActive(this);
+                rows.forEach(r => {
+                    const reqDate = new Date(r.getAttribute("data-request"));
+                    r.style.display = reqDate.toDateString() === new Date().toDateString() ? "" : "none";
+                });
+            });
+
+            btnWeek.addEventListener("click", function () {
+                resetActive(this);
+                const todayCopy = new Date();
+                const first = todayCopy.getDate() - todayCopy.getDay();
+                const last = first + 6;
+                const weekStart = new Date(todayCopy.setDate(first));
+                const weekEnd = new Date(todayCopy.setDate(last));
+                rows.forEach(r => {
+                    const reqDate = new Date(r.getAttribute("data-request"));
+                    r.style.display = (reqDate >= weekStart && reqDate <= weekEnd) ? "" : "none";
+                });
+            });
+
+            // ✅ Search Filter
+            searchInput.addEventListener("keyup", function () {
+                const val = this.value.toLowerCase();
+                rows.forEach(r => {
+                    const text = r.textContent.toLowerCase();
+                    r.style.display = text.includes(val) ? "" : "none";
+                });
+            });
+        });
+    </script>
+}

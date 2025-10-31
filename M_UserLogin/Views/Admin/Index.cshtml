@@ -7,7 +7,7 @@
 <style>
     body {
         background: linear-gradient(135deg, #1e1e2f, #252540, #12121c);
-        color: #f0f0f0;
+        color: #ffffff !important;
         font-family: 'Segoe UI', sans-serif;
         min-height: 100vh;
     }
@@ -15,7 +15,7 @@
     .admin-dashboard {
         max-width: 1200px;
         margin: 40px auto;
-        background: rgba(255, 255, 255, 0.05);
+        background: rgba(255, 255, 255, 0.08);
         border-radius: 16px;
         padding: 30px;
         box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
@@ -23,19 +23,25 @@
 
     h2 {
         text-align: center;
-        color: #ffc107;
+        color: #ffca28;
         font-weight: 600;
     }
 
     .table {
-        color: #f8f9fa;
-        background-color: rgba(255, 255, 255, 0.05);
+        color: #fff !important;
+        background-color: rgba(255, 255, 255, 0.1);
+        border-color: #444;
     }
 
-    .table th {
-        background-color: #ffc107;
-        color: #000;
-    }
+        .table th {
+            background-color: #ffca28;
+            color: #000;
+        }
+
+        .table td {
+            color: #fff !important;
+            background-color: rgba(255, 255, 255, 0.05);
+        }
 
     .btn {
         border-radius: 8px;
@@ -45,20 +51,22 @@
     .btn-success {
         background-color: #28a745;
         border: none;
+        color: white !important;
     }
 
-    .btn-success:hover {
-        background-color: #218838;
-    }
+        .btn-success:hover {
+            background-color: #218838;
+        }
 
     .btn-danger {
         background-color: #dc3545;
         border: none;
+        color: white !important;
     }
 
-    .btn-danger:hover {
-        background-color: #c82333;
-    }
+        .btn-danger:hover {
+            background-color: #c82333;
+        }
 
     .alert-success {
         background-color: #28a745;
@@ -68,9 +76,55 @@
     }
 
     .text-muted {
-        color: #ccc !important;
+        color: #ddd !important;
     }
+
+    input[type="text"], select, textarea {
+        background-color: rgba(255, 255, 255, 0.1);
+        color: #fff;
+        border: 1px solid #ffca28;
+        border-radius: 8px;
+        padding: 6px 10px;
+    }
+
+        input[type="text"]:focus {
+            outline: none;
+            box-shadow: 0 0 6px #ffca28;
+        }
+
+    #userSearch {
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid #ffca28;
+        color: #fff;
+        border-radius: 10px;
+        padding: 10px 15px;
+        width: 100%;
+        margin-bottom: 20px;
+        transition: 0.3s;
+    }
+
+        #userSearch:focus {
+            outline: none;
+            box-shadow: 0 0 8px #ffca28;
+        }
+
+    #exportBtn {
+        background-color: #007bff;
+        border: none;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 8px;
+        font-weight: 600;
+        transition: 0.3s;
+        float: right;
+    }
+
+        #exportBtn:hover {
+            background-color: #0069d9;
+            transform: translateY(-2px);
+        }
 </style>
+
 
 <div class="admin-dashboard">
     <h2 class="mb-3">⚙️ Admin Dashboard</h2>
@@ -83,7 +137,12 @@
         </div>
     }
 
-    <table class="table table-bordered table-striped mt-4">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <input type="text" id="userSearch" placeholder="🔍 Search by name, email, or role..." style="width:70%;" />
+        <button id="exportBtn">📤 Export to Excel (CSV)</button>
+    </div>
+
+    <table class="table table-bordered table-striped mt-4" id="userTable">
         <thead class="text-center">
             <tr>
                 <th>Full Name</th>
@@ -102,8 +161,8 @@
                     <td>
                         @{
                             var rolesForUser = (ViewBag.UserRoles as List<(M_UserLogin.Models.Users User, IList<string> Roles)>)
-                                               ?.FirstOrDefault(u => u.User.Id == user.Id)
-                                               .Roles;
+                            ?.FirstOrDefault(u => u.User.Id == user.Id)
+                            .Roles;
                         }
                         @if (rolesForUser != null && rolesForUser.Any())
                         {
@@ -132,3 +191,37 @@
         </tbody>
     </table>
 </div>
+
+<script>
+    // 🔍 Search Filter
+    document.getElementById('userSearch').addEventListener('keyup', function () {
+        const query = this.value.toLowerCase();
+        const rows = document.querySelectorAll('#userTable tbody tr');
+
+        rows.forEach(row => {
+            const text = row.textContent.toLowerCase();
+            row.style.display = text.includes(query) ? '' : 'none';
+        });
+    });
+
+    // 📤 Export Table to CSV
+    document.getElementById('exportBtn').addEventListener('click', function () {
+        const rows = document.querySelectorAll("#userTable tr");
+        let csv = [];
+
+        rows.forEach(row => {
+            const cols = row.querySelectorAll("th, td");
+            const rowData = Array.from(cols).map(col => `"${col.innerText.replace(/"/g, '""')}"`).join(",");
+            csv.push(rowData);
+        });
+
+        const csvContent = "data:text/csv;charset=utf-8," + csv.join("\n");
+        const encodedUri = encodeURI(csvContent);
+        const link = document.createElement("a");
+        link.setAttribute("href", encodedUri);
+        link.setAttribute("download", "EMS_UserData.csv");
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    });
+</script>

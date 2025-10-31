@@ -2,45 +2,123 @@
 @{
     ViewData["Title"] = "Manage Attendance";
     Layout = "~/Views/Shared/_Layout.cshtml";
+
+    var allUsers = ViewBag.AllUsers as List<M_UserLogin.Models.Users>;
+    var today = DateTime.Today;
+
+    var todayRecords = Model.Where(r => r.Date.Date == today).ToList();
+    var presentTodayIds = todayRecords.Select(r => r.User?.Id).Distinct().ToList();
+    var absentToday = allUsers.Where(u => !presentTodayIds.Contains(u.Id)).ToList();
 }
 
 <div class="container-fluid mt-4 px-5">
     <div class="card shadow-lg p-4" style="background:#111; color:white; border:1px solid #ffc107;">
         <h3 class="text-warning text-center mb-4">⚙️ Manage Attendance</h3>
 
-        <table class="table table-dark table-striped text-center">
-            <thead>
-                <tr>
-                    <th>User</th>
-                    <th>Email</th>
-                    <th>Date</th>
-                    <th>Check-In</th>
-                    <th>Check-Out</th>
-                    <th>Status</th>
-                </tr>
-            </thead>
-            <tbody>
-                @foreach (var r in Model)
-                {
+        <div class="d-flex justify-content-center gap-3 mb-3">
+            <button class="btn btn-outline-warning" onclick="showSection('all')">📋 Show All</button>
+            <button class="btn btn-outline-success" onclick="showSection('present')">✅ Present Today</button>
+            <button class="btn btn-outline-danger" onclick="showSection('absent')">❌ Absent Today</button>
+        </div>
+
+        <!-- All Records -->
+        <div id="section-all">
+            <table class="table table-dark table-striped text-center">
+                <thead>
                     <tr>
-                        <td>@r.User?.FullName</td>
-                        <td>@r.User?.Email</td>
-                        <td>@r.Date.ToShortDateString()</td>
-                        <td>@(r.CheckInTime?.ToShortTimeString() ?? "-")</td>
-                        <td>@(r.CheckOutTime?.ToShortTimeString() ?? "-")</td>
-                        <td>
-                            @if (r.Status == "Present")
-                            { <span class="badge bg-success">Present</span> }
-                            else
-                            { <span class="badge bg-danger">Absent</span> }
-                        </td>
+                        <th>User</th>
+                        <th>Email</th>
+                        <th>Date</th>
+                        <th>Check-In</th>
+                        <th>Check-Out</th>
+                        <th>Status</th>
                     </tr>
-                }
-            </tbody>
-        </table>
+                </thead>
+                <tbody>
+                    @foreach (var r in Model.OrderByDescending(r => r.Date))
+                    {
+                        <tr>
+                            <td>@r.User?.FullName</td>
+                            <td>@r.User?.Email</td>
+                            <td>@r.Date.ToShortDateString()</td>
+                            <td><span class="badge bg-success">@r.CheckInTime?.ToShortTimeString()</span></td>
+                            <td><span class="badge bg-danger">@r.CheckOutTime?.ToShortTimeString()</span></td>
+                            <td>
+                                @if (r.Status == "Present")
+                                {
+                                    <span class="badge bg-success">Present</span>
+                                }
+                                else
+                                {
+
+                                    <span class="badge bg-danger">Absent</span>
+                                }
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Present Today -->
+        <div id="section-present" style="display:none;">
+            <h5 class="text-success mb-3">✅ Present Today (@today.ToShortDateString())</h5>
+            <table class="table table-dark table-striped text-center">
+                <thead>
+                    <tr>
+                        <th>User</th>
+                        <th>Email</th>
+                        <th>Check-In</th>
+                        <th>Check-Out</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var r in todayRecords)
+                    {
+                        <tr>
+                            <td>@r.User?.FullName</td>
+                            <td>@r.User?.Email</td>
+                            <td><span class="badge bg-success">@r.CheckInTime?.ToShortTimeString()</span></td>
+                            <td><span class="badge bg-danger">@r.CheckOutTime?.ToShortTimeString()</span></td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Absent Today -->
+        <div id="section-absent" style="display:none;">
+            <h5 class="text-danger mb-3">❌ Absent Today (@today.ToShortDateString())</h5>
+            <table class="table table-dark table-striped text-center">
+                <thead>
+                    <tr>
+                        <th>User</th>
+                        <th>Email</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var u in absentToday)
+                    {
+                        <tr>
+                            <td>@u.FullName</td>
+                            <td>@u.Email</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
 
         <div class="text-center mt-3">
             <a asp-controller="Home" asp-action="Index" class="btn btn-outline-warning">⬅ Back to Dashboard</a>
         </div>
     </div>
 </div>
+
+<script>
+    function showSection(id) {
+        document.getElementById("section-all").style.display = "none";
+        document.getElementById("section-present").style.display = "none";
+        document.getElementById("section-absent").style.display = "none";
+        document.getElementById("section-" + id).style.display = "block";
+    }
+</script>

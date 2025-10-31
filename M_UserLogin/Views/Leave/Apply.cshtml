@@ -1,6 +1,6 @@
 ﻿@model M_UserLogin.Models.LeaveRequest
 @{
-    ViewData["Title"] = "Apply for Leave";
+    ViewData["Title"] = "Apply Leave";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
@@ -8,56 +8,47 @@
     <div class="card shadow-lg p-4" style="background-color:#111; color:white; border:1px solid #ffc107;">
         <h3 class="text-warning text-center mb-4">📝 Apply for Leave</h3>
 
+        @if (TempData["Error"] != null)
+        {
+            <div class="alert alert-danger text-center">@TempData["Error"]</div>
+        }
         @if (TempData["Message"] != null)
         {
             <div class="alert alert-success text-center">@TempData["Message"]</div>
         }
 
-        @if (TempData["Error"] != null)
-        {
-            <div class="alert alert-danger text-center">@TempData["Error"]</div>
-        }
+        <div class="mb-4 text-center">
+            <h5>🟡 Casual Leave: @ViewBag.CasualLeave</h5>
+            <h5>🔵 Sick Leave: @ViewBag.SickLeave</h5>
+            <h5>🟢 Annual Leave: @ViewBag.AnnualLeave</h5>
+        </div>
 
         <form asp-action="Apply" method="post">
             @Html.AntiForgeryToken()
-
-            <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
-
             <div class="mb-3">
-                <label asp-for="LeaveType" class="form-label text-warning">Leave Type</label>
-                <select asp-for="LeaveType" class="form-select bg-dark text-white border-warning" required>
+                <label asp-for="LeaveType" class="form-label">Leave Type</label>
+                <select asp-for="LeaveType" class="form-select" required>
                     <option value="">-- Select Leave Type --</option>
-                    <option value="Sick Leave">Sick Leave</option>
-                    <option value="Casual Leave">Casual Leave</option>
-                    <option value="Emergency Leave">Emergency Leave</option>
-                    <option value="Annual Leave">Annual Leave</option>
+                    <option>Casual Leave</option>
+                    <option>Sick Leave</option>
+                    <option>Annual Leave</option>
                 </select>
             </div>
-
-            <div class="row">
-                <div class="col-md-6 mb-3">
-                    <label asp-for="StartDate" class="form-label text-warning">Start Date</label>
-                    <input asp-for="StartDate" type="date" class="form-control bg-dark text-white border-warning" required />
-                </div>
-                <div class="col-md-6 mb-3">
-                    <label asp-for="EndDate" class="form-label text-warning">End Date</label>
-                    <input asp-for="EndDate" type="date" class="form-control bg-dark text-white border-warning" required />
-                </div>
-            </div>
-
             <div class="mb-3">
-                <label asp-for="Reason" class="form-label text-warning">Reason</label>
-                <textarea asp-for="Reason" class="form-control bg-dark text-white border-warning" rows="3" placeholder="Describe your reason..." required></textarea>
+                <label asp-for="StartDate" class="form-label">Start Date</label>
+                <input asp-for="StartDate" class="form-control" type="date" required />
             </div>
-
-            <div class="text-center mt-4">
-                <button type="submit" class="btn btn-warning fw-bold px-4">Submit Request</button>
-                <a asp-controller="Home" asp-action="Index" class="btn btn-outline-warning fw-bold px-4 ms-2">⬅ Back</a>
+            <div class="mb-3">
+                <label asp-for="EndDate" class="form-label">End Date</label>
+                <input asp-for="EndDate" class="form-control" type="date" required />
+            </div>
+            <div class="mb-3">
+                <label asp-for="Reason" class="form-label">Reason</label>
+                <textarea asp-for="Reason" class="form-control" rows="3" required></textarea>
+            </div>
+            <div class="text-center">
+                <button type="submit" class="btn btn-warning fw-bold">Submit Leave Request</button>
             </div>
         </form>
     </div>
 </div>
-
-@section Scripts {
-    <partial name="_ValidationScriptsPartial" />
-}

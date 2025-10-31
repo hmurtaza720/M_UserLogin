@@ -2,6 +2,7 @@
 using M_UserLogin.ViewModels;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using System.Threading.Tasks;
 
 namespace M_UserLogin.Controllers
 {
@@ -30,8 +31,9 @@ namespace M_UserLogin.Controllers
                 if (result.Succeeded)
                     return RedirectToAction("Index", "Home");
 
-                ModelState.AddModelError(string.Empty, "Invalid Login Attempt");
+                ModelState.AddModelError(string.Empty, "Invalid login attempt.");
             }
+
             return View(model);
         }
 
@@ -48,7 +50,7 @@ namespace M_UserLogin.Controllers
                     FullName = model.Name,
                     Email = model.Email,
                     UserName = model.Email,
-                    SecretCode = model.SecretCode // ✅ Save secret code
+                    SecretCode = model.SecretCode
                 };
 
                 var result = await userManager.CreateAsync(users, model.Password);
@@ -59,29 +61,37 @@ namespace M_UserLogin.Controllers
                 foreach (var error in result.Errors)
                     ModelState.AddModelError("", error.Description);
             }
+
             return View(model);
         }
 
-        // ========================== VERIFY EMAIL ==========================
-        public IActionResult VerifyEmail() => View();
+        // ========================== VERIFY EMAIL (FORGOT PASSWORD STEP 1) ==========================
+        [HttpGet]
+        public IActionResult VerifyEmail()
+        {
+            return View(); // Shows VerifyEmail.cshtml
+        }
 
         [HttpPost]
         public async Task<IActionResult> VerifyEmail(VerifyEmailViewModel model)
         {
-            if (ModelState.IsValid)
+            if (!ModelState.IsValid)
+                return View(model);
+
+            var user = await userManager.FindByEmailAsync(model.Email);
+
+            if (user == null)
             {
-                var user = await userManager.FindByEmailAsync(model.Email);
-                if (user == null)
-                {
-                    ModelState.AddModelError(string.Empty, "Email not found.");
-                    return View(model);
-                }
-                return RedirectToAction("ChangePassword", "Account", new { username = user.UserName });
+                ModelState.AddModelError(string.Empty, "❌ Email not found in our system.");
+                return View(model);
             }
-            return View(model);
+
+            // Redirect to Change Password page with username (email)
+            return RedirectToAction("ChangePassword", "Account", new { username = user.UserName });
         }
 
-        // ========================== CHANGE PASSWORD ==========================
+        // ========================== CHANGE PASSWORD (FORGOT PASSWORD STEP 2) ==========================
+        [HttpGet]
         public IActionResult ChangePassword(string username)
         {
             if (string.IsNullOrEmpty(username))
@@ -93,37 +103,47 @@ namespace M_UserLogin.Controllers
         [HttpPost]
         public async Task<IActionResult> ChangePassword(ChangePasswordViewModel model)
         {
-            if (ModelState.IsValid)
+            if (!ModelState.IsValid)
             {
-                var user = await userManager.FindByEmailAsync(model.Email);
-                if (user != null)
-                {
-                    // 🧠 Verify Secret Code before changing password
-                    if (user.SecretCode != model.SecretCode)
-                    {
-                        ModelState.AddModelError("", "❌ Invalid Secret Code!");
-                        return View(model);
-                    }
+                ModelState.AddModelError("", "Please fill in all required fields correctly.");
+                return View(model);
+            }
 
-                    var result = await userManager.RemovePasswordAsync(user);
-                    if (result.Succeeded)
-                    {
-                        result = await userManager.AddPasswordAsync(user, model.NewPassword);
-                        return RedirectToAction("Login", "Account");
-                    }
+            var user = await userManager.FindByEmailAsync(model.Email);
 
-                    foreach (var error in result.Errors)
-                        ModelState.AddModelError("", error.Description);
-                }
-                else
+            if (user == null)
+            {
+                ModelState.AddModelError("", "❌ Email not found.");
+                return View(model);
+            }
+
+            // Verify Secret Code before changing password
+            if (user.SecretCode != model.SecretCode)
+            {
+                ModelState.AddModelError("", "❌ Invalid Secret Code!");
+                return View(model);
+            }
+
+            // Remove old password and set new one
+            var removeResult = await userManager.RemovePasswordAsync(user);
+            if (removeResult.Succeeded)
+            {
+                var addResult = await userManager.AddPasswordAsync(user, model.NewPassword);
+                if (addResult.Succeeded)
                 {
-                    ModelState.AddModelError("", "Email not found.");
+                    TempData["Message"] = "✅ Password changed successfully!";
+                    return RedirectToAction("Login", "Account");
                 }
+
+                foreach (var error in addResult.Errors)
+                    ModelState.AddModelError("", error.Description);
             }
             else
             {
-                ModelState.AddModelError("", "Something went wrong. Try again.");
+                foreach (var error in removeResult.Errors)
+                    ModelState.AddModelError("", error.Description);
             }
+
             return View(model);
         }
 

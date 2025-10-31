@@ -162,7 +162,6 @@ C:\Users\i_murtaza\Git C#\C-\M_UserLogin\M_UserLogin\obj\Debug\net9.0\scopedcss\
 C:\Users\i_murtaza\Git C#\C-\M_UserLogin\M_UserLogin\obj\Debug\net9.0\scopedcss\bundle\M_UserLogin.styles.css
 C:\Users\i_murtaza\Git C#\C-\M_UserLogin\M_UserLogin\obj\Debug\net9.0\scopedcss\projectbundle\M_UserLogin.bundle.scp.css
 C:\Users\i_murtaza\Git C#\C-\M_UserLogin\M_UserLogin\obj\Debug\net9.0\compressed\idgobhsfvs-ow2qv1kn8z.gz
-C:\Users\i_murtaza\Git C#\C-\M_UserLogin\M_UserLogin\obj\Debug\net9.0\compressed\1x0jllgw7z-b9sayid5wm.gz
 C:\Users\i_murtaza\Git C#\C-\M_UserLogin\M_UserLogin\obj\Debug\net9.0\compressed\onstigj6cp-61n19gt1b8.gz
 C:\Users\i_murtaza\Git C#\C-\M_UserLogin\M_UserLogin\obj\Debug\net9.0\compressed\r6sdmmaaec-xtxxf3hu2r.gz
 C:\Users\i_murtaza\Git C#\C-\M_UserLogin\M_UserLogin\obj\Debug\net9.0\compressed\18e8vcljze-bqjiyaj88i.gz
@@ -237,3 +236,5 @@ C:\Users\i_murtaza\Git C#\C-\M_UserLogin\M_UserLogin\obj\Debug\net9.0\refint\M_U
 C:\Users\i_murtaza\Git C#\C-\M_UserLogin\M_UserLogin\obj\Debug\net9.0\M_UserLogin.pdb
 C:\Users\i_murtaza\Git C#\C-\M_UserLogin\M_UserLogin\obj\Debug\net9.0\M_UserLogin.genruntimeconfig.cache
 C:\Users\i_murtaza\Git C#\C-\M_UserLogin\M_UserLogin\obj\Debug\net9.0\ref\M_UserLogin.dll
+C:\Users\i_murtaza\Git C#\C-\M_UserLogin\M_UserLogin\obj\Debug\net9.0\compressed\8rxb96o6mn-u3i4bosm1k.gz
+C:\Users\i_murtaza\Git C#\C-\M_UserLogin\M_UserLogin\obj\Debug\net9.0\compressed\1x0jllgw7z-t0op0dd7mz.gz

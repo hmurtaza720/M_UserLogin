@@ -1,0 +1,163 @@
+﻿/* ================= Tech Vibe Global Styles ================= */
+body {
+    background: linear-gradient(135deg, #1e1e2f, #252540, #12121c);
+    color: #f0f0f0;
+    font-family: 'Segoe UI', sans-serif;
+    min-height: 100vh;
+}
+
+/* ---------------- Cards ---------------- */
+.card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    color: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    transition: 0.3s;
+    box-shadow: 0 0 10px rgba(255,255,255,0.05);
+    position: relative;
+    overflow: hidden;
+}
+
+    .card::before {
+        content: '';
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: linear-gradient(45deg, #ffca2c, #ffc107, #00d4ff, #ffca2c);
+        background-size: 400% 400%;
+        filter: blur(15px);
+        opacity: 0.6;
+        animation: gradientPulse 6s ease infinite;
+        pointer-events: none;
+        border-radius: 12px;
+    }
+
+    .card:hover {
+        transform: translateY(-5px);
+        background: rgba(255, 255, 255, 0.15);
+        box-shadow: 0 0 15px #ffc107, 0 0 25px #ffca2c, 0 0 35px #00d4ff;
+        border-color: #ffc107;
+    }
+
+    .card h5 {
+        color: #ffc107;
+        font-weight: 600;
+        margin-bottom: 10px;
+        position: relative;
+        z-index: 1;
+    }
+
+    .card p {
+        font-size: 0.85rem;
+        line-height: 1.4;
+        position: relative;
+        z-index: 1;
+    }
+
+/* ---------------- Buttons ---------------- */
+.btn-warning, .btn-outline-light {
+    border-radius: 25px;
+    font-weight: 600;
+    padding: 10px 25px;
+    transition: all 0.3s ease;
+    animation: neonPulse 2s infinite alternate;
+}
+
+.btn-warning {
+    background-color: #ffc107;
+    color: #000;
+    border: none;
+}
+
+    .btn-warning:hover {
+        background-color: #ffca2c;
+        transform: translateY(-2px) scale(1.05);
+    }
+
+.btn-outline-light {
+    border-color: #ffc107;
+    color: #ffc107;
+}
+
+    .btn-outline-light:hover {
+        background: #ffc107;
+        color: #000;
+        transform: translateY(-2px) scale(1.05);
+    }
+
+/* ---------------- Signature ---------------- */
+.signature {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.9rem;
+    color: #ffca2c;
+    text-shadow: 0 0 5px #ffca2c, 0 0 10px #ffca2c;
+    letter-spacing: 0.5px;
+    animation: pulse 2s infinite;
+    text-align: center;
+    margin-top: 15px;
+}
+
+    .signature span {
+        font-weight: 700;
+        color: #00d4ff;
+        text-shadow: 0 0 8px #00d4ff, 0 0 12px #00d4ff;
+    }
+
+/* ---------------- Animations ---------------- */
+@keyframes pulse {
+    0% {
+        text-shadow: 0 0 5px #ffca2c, 0 0 10px #ffca2c;
+    }
+
+    50% {
+        text-shadow: 0 0 10px #ffca2c, 0 0 20px #ffca2c;
+    }
+
+    100% {
+        text-shadow: 0 0 5px #ffca2c, 0 0 10px #ffca2c;
+    }
+}
+
+@keyframes gradientPulse {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes neonPulse {
+    0% {
+        box-shadow: 0 0 5px #ffc107, 0 0 10px #ffca2c;
+    }
+
+    50% {
+        box-shadow: 0 0 10px #ffc107, 0 0 20px #ffca2c;
+    }
+
+    100% {
+        box-shadow: 0 0 5px #ffc107, 0 0 10px #ffca2c;
+    }
+}
+
+/* ---------------- Responsive ---------------- */
+@media (max-width: 992px) {
+    .card {
+        flex: 1 1 calc(50% - 20px);
+    }
+}
+
+@media (max-width: 600px) {
+    .card {
+        flex: 1 1 100%;
+    }
+}

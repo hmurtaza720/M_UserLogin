@@ -3,83 +3,166 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewBag.Title - EMS</title>
+    <title>@ViewBag.Title - EMS Account</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+
     <style>
         body {
             font-family: 'Segoe UI', sans-serif;
             background: linear-gradient(135deg, #1e1e2f, #252540, #12121c);
             color: #f0f0f0;
-            min-height: 100vh;
             display: flex;
-            justify-content: center;
             align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
         }
 
-        .account-box {
-            max-width: 450px;
-            width: 100%;
-            margin: 60px auto;
+        .auth-container {
             background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.15);
             border-radius: 16px;
-            padding: 30px;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.4);
-            animation: fadeInUp 0.8s ease;
+            padding: 40px 50px;
+            box-shadow: 0 0 25px rgba(255, 193, 7, 0.15);
+            width: 100%;
+            max-width: 480px;
+            animation: fadeIn 0.8s ease;
         }
 
         h2 {
-            color: #ffc107;
+            text-align: center;
+            margin-bottom: 15px;
+            color: #ffc107 !important;
             font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        .auth-subtext {
+            text-align: center;
+            font-size: 0.95rem;
+            color: #ccc;
+            margin-bottom: 25px;
         }
 
         label {
-            color: #ddd;
             font-weight: 500;
+            color: #f0f0f0 !important;
         }
 
         input.form-control {
             background: rgba(255, 255, 255, 0.1);
-            border: 1px solid #444;
-            color: #fff;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: #fff !important;
+            border-radius: 10px;
         }
 
-        input.form-control:focus {
-            border-color: #ffc107;
-            box-shadow: 0 0 8px #ffc107;
+            input.form-control:focus {
+                border-color: #ffc107;
+                box-shadow: 0 0 6px #ffc107;
+            }
+
+        ::placeholder {
+            color: #ccc !important;
+            opacity: 0.8;
         }
 
         .btn-primary {
-            background: #ffc107;
+            background-color: #ffc107;
             border: none;
-            color: #000;
+            color: #1e1e2f;
             font-weight: 600;
-            transition: 0.3s;
+            width: 100%;
+            margin-top: 15px;
+            border-radius: 10px;
+            transition: all 0.3s ease;
         }
 
-        .btn-primary:hover {
-            background: #ffda47;
-            transform: translateY(-2px);
-        }
+            .btn-primary:hover {
+                background-color: #ffda47;
+                transform: translateY(-2px);
+                box-shadow: 0 0 10px #ffc107;
+            }
 
-        a.text-link {
-            color: #ffc107;
+        .text-center a {
+            color: #ffc107 !important;
             text-decoration: none;
         }
 
-        a.text-link:hover {
-            text-decoration: underline;
+            .text-center a:hover {
+                color: #ffda47 !important;
+                text-shadow: 0 0 8px #ffc107;
+            }
+
+        footer {
+            position: absolute;
+            bottom: 15px;
+            width: 100%;
+            text-align: center;
+            color: #bbb;
+            font-size: 0.9rem;
         }
 
-        keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
+            footer span {
+                color: #ffc107;
+                font-weight: 600;
+            }
+
+        keyframes fadeIn {
+            from
+
+        {
+            opacity: 0;
+            transform: translateY(10px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
         }
     </style>
 </head>
 <body>
-    <div class="account-box">
+    <div class="auth-container">
+        <!-- Page Title -->
+        <h2>@ViewBag.Title</h2>
+
+        <!-- Subtext -->
+        @if (ViewBag.Title == "Login")
+        {
+            <p class="auth-subtext">Access your account securely using your credentials.</p>
+        }
+        else if (ViewBag.Title == "Register")
+        {
+            <p class="auth-subtext">Create your account to access the EMS Portal.</p>
+        }
+        else if (ViewBag.Title == "Verify Email")
+        {
+            <p class="auth-subtext">Please verify your email to activate your EMS account.</p>
+        }
+        else if (ViewBag.Title == "Forgot Password")
+        {
+            <p class="auth-subtext">Enter your email address to receive password reset instructions.</p>
+        }
+        else if (ViewBag.Title == "Reset Password")
+        {
+            <p class="auth-subtext">Set a new secure password for your EMS account.</p>
+        }
+        else if (ViewBag.Title == "Change Password")
+        {
+            <p class="auth-subtext">Change your current password to keep your account secure.</p>
+        }
+
+        <!-- Page Body -->
         @RenderBody()
     </div>
+
+    <footer>
+        © 2025 <span>EMS</span> — Made by <span>Syed Murtaza Hassan Rizvi ⚡</span><br />
+        <em>"Powered by Energy & Innovation"</em>
+    </footer>
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
